@@ -44,8 +44,8 @@
                 /*background-image: linear-gradient(63deg, rgba(96, 20, 197, 0.65), rgba(26, 206, 31, 0.53)),url(static/images/universe19.png);*/
                 display: grid;
                 color: white;
-                /* background-position: center; */
-                object-fit: cover;
+                background-size: cover;
+               
                 height: 673px;
                 width: 100%;
             }
@@ -94,22 +94,21 @@
             
             .hero--text {
 			    font-size: 4em;
-			    padding: 2em;
-			    padding-left: 15px;
-			    margin-left: 31px;
-			    text-shadow: 0px 3px 3px black;
-			    font-weight: 100;
-			    display: block;
+			    /*padding: 2em;*/
+			    padding-left: 12px;
+			    /*margin-left: 31px;*/
+			   text-shadow: 0px 3px 3px black;			    align-self: center;		    			    font-weight: 100;
 			    position: relative;
 			    top: 9%;
+			text-align: center;
 			}
 
             .hero--small {
-                text-shadow: 0px 3px 3px black;
-                display: block;
-                margin-top: 19px;
-                font-size: 30px;
-            }
+    text-shadow: 0px 3px 3px black;
+    display: block;
+    margin-top: 19px;
+    font-size: 50px;
+}
 
             .arrow--down{
                 text-align: center;
@@ -168,7 +167,7 @@
 
             h2.about--heading {
                         font-size: 60px;
-                        text-shadow: -5px 3px #4CAF50;
+                        text-shadow: -3px 2px #4CAF50;
                         margin-bottom: 25px;
             }
             p.about--text {
@@ -176,7 +175,12 @@
             }
             h2.misson--heading {
                 font-size: 60px;
-                text-shadow: -4px 3px #FF5722;
+                text-shadow: -3px 2px #FF5722;
+                margin-bottom: 25px;
+            }
+	  h2.vision--heading {
+                font-size: 60px;
+                text-shadow: -4px 3px #1e5fbf;
                 margin-bottom: 25px;
             }
             /*footer*/
@@ -206,6 +210,12 @@
             
                  /* mobile nav */
         @media screen and (max-width: 864px) {
+	.hero--text{
+		font-size: 30px;
+	}
+		.hero--small{
+			font-size: 20px;
+		}
             .nav-wrapper {
                 display: block !important;
             }
