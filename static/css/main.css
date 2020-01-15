@@ -99,7 +99,7 @@ li.link.four {
     font-size: 24px;
 }
 
-.hero--text {
+ {
     font-size: 4em;
     /*padding: 2em;*/
     padding-left: 12px;
@@ -233,6 +233,7 @@ h2.vision--heading {
 @media screen and (max-width: 864px) {
     .hero--text {
         font-size: 50px;
+	padding-left:0;
     }
 
     .hero--small {
