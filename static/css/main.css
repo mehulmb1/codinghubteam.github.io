@@ -276,7 +276,6 @@ h2.vision--heading {
         height: 100%;
         z-index: -1;
         linear-gradient(-45deg, rgb(139, 156, 249), rgb(222, 34, 98));
-        opacity: 0;
         transition: all 0.2s ease;
     }
 
