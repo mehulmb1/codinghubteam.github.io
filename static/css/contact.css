@@ -217,9 +217,9 @@ li.link.four {
 }
 
 @media screen and (max-width: 864px) {
-    form{
-	    z-index: -10000;
-	}
+  
+
+	
     nav {
         padding: 0;
     }
