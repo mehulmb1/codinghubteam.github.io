@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Contact Us</title>
 	<meta name="viewport" content="width=device-width">
-    <meta name="charset" content="utf-8">
-    <link rel="icon" type="image/png" href="static/images/hub.jpg">
-    <link rel="apple-touch-icon" type="image/png" href="static/images/hub.jpg">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="static/css/contact.css" rel="stylesheet">
-    <script>window.onscroll = () => {
-    	  const nav = document.querySelector('#navbar');
-    	  if(this.scrollY <=0) nav.className = ''; else nav.className = 'scroll';
-    	};</script>
+	<meta name="charset" content="utf-8">
+	<meta name="theme-color" content="#412b69">
+	<link rel="icon" type="image/png" href="static/images/hub.jpg">
+	<link rel="apple-touch-icon" type="image/png" href="static/images/hub.jpg">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link href="static/css/contact.css" rel="stylesheet">
+	<script>
+		window.onscroll = () => {
+			const nav = document.querySelector('#navbar');
+			if (this.scrollY <= 0) nav.className = '';
+			else nav.className = 'scroll';
+		};
+	</script>
 </head>
+
 <body>
         <input type="checkbox" id="nav" class="hidden">
         <label for="nav" class="nav-btn">
@@ -157,4 +163,5 @@
         </div>
         <!--hero container end-->
 </body>
+
 </html>
