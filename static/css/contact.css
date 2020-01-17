@@ -204,11 +204,7 @@ li.link.four {
 }
 
 @media screen and (max-width: 864px) {
-	.heading{
-	  margin-top: 30px;
-    	font-size: 50px;
-    	margin-bottom: -87px;
-	}
+	
     nav {
         padding: 0;
     }
