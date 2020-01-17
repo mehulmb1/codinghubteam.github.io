@@ -30,7 +30,7 @@ nav {
 nav.scroll {
     top: 0em;
     height: 5em;
-    background-image:-webkit-linear-gradient(left,rgb(129, 211, 112) 0%, rgb(124, 143, 208) 100%);
+    background-image: linear-gradient(90deg, rgb(129, 200, 129), rgb(123, 135, 219));
     color: #eef;
     z-index: 0;
 }
@@ -62,7 +62,7 @@ nav.scroll {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: auto;
-    grid-gap: 40px;
+    grid-gap: 59px;
     justify-content: end;
 }
 
@@ -197,10 +197,15 @@ li.link.four {
 .footer--text {
     font-weight: 100;
 }
+.footer {
+    z-index: -100;
+}
 
 @media screen and (max-width: 864px) {
 	.heading{
-	font-size:50px;
+	  margin-top: 40px;
+    	font-size: 50px;
+    	margin-bottom: -87px;
 	}
     nav {
         padding: 0;
@@ -234,7 +239,7 @@ li.link.four {
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: rgba(215, 226, 234, 0.98);
+        background: linear-gradient(-45deg, rgb(139, 156, 249), rgb(222, 34, 98));
         opacity: 0;
         transition: all 0.2s ease;
     }
