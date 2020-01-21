@@ -241,11 +241,12 @@ li.link.four {
 }
 
 @media screen and (max-width: 864px) {
-  
 
-	
     nav {
         padding: 0;
+        top:0em;
+        height:5em;
+        background-image: linear-gradient(90deg,rgb(125, 166, 175),rgb(129, 200, 129));
     }
 
     .hero--nav {
