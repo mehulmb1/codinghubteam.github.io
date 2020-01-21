@@ -2,30 +2,26 @@
 <html>
 
 <head>
-    <title>Coding hub</title>
+    <title>About Us</title>
     <meta name="viewport" content="width=device-width">
     <meta name="charset" content="utf-8">
     <meta name="google-site-verification" content="HKE8WuU9jmTqLYJQeGP3ZPbHInVZybJ094VH6DEJJ0c">
     <link rel="icon" type="image/png" href="static/images/hub.jpg">
     <link rel="apple-touch-icon" type="image/png" href="static/images/hub.jpg">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="static/css/main.css" rel="stylesheet">
-
-    <meta name="theme-color" content="#412b69">
-    <meta property="og:title" content="Coding Hub Skncoe">
-    <meta name="description" content="A Platform Where We Explore Our Technical Skill. A team which is fully passionate about technology & new ideas and always try to give our best performance. Coding hub create an environment where college students can show their coding , technical and project managing skills">
-    <meta property="og:description" content="A Platform Where We Explore Our Technical Skill. A team which is fully passionate about technology & new ideas and always try to give our best performance. Coding hub create an environment where college students can show their coding , technical and project managing skills">
-    <meta property="og:url" content="http://codinghub.org.in">
-    <meta property="og:image" content="http://codinghub.org.in/static/images/hub.jpg">
-    <meta property="og:locale" content="en">
-    <script src="static/js/main.js">
+    <link href="static/css/about.css" rel="stylesheet">
+    <!--script src="static/js/about.js">
+    </script-->
+    <script>
+        window.onscroll = () => {
+          const nav = document.querySelector('#navbar');
+          if (this.scrollY <= 0) nav.className = '';
+          else nav.className = 'scroll';
+        };
     </script>
 </head>
 
 <body>
-
-    <header>
-        <canvas class="header__background"></canvas>
         <input type="checkbox" id="nav" class="hidden">
         <label for="nav" class="nav-btn">
             <i></i>
@@ -50,75 +46,29 @@
                         <li class="link one"><a href="/">Coding Hub</a></li>
                         <div class="big-menu">
                             <div class="left">
+                                <a href="/">
+                                    <img src="static/images/home.png" class="home">
+                                </a>
                                 <a href="/events.html">
                                     <li class="link two">Events</li>
                                 </a>
                                 <a href="/faq.html">
                                     <li class="link three">FAQ's</li>
-                                </a>
+                                  </a>
                                 <a href="/contact.html">
                                     <li class="link four">Contact Us</li>
-                                </a>
-                                <a href="/about.html">
-                                	<li class="link five">About Us</li>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </nav>
-                <h1 class="hero--text">Empowering Coding culture
-
-                <span class="hero--small">
-                    <span class="tagline"> Passion. Patience. Performance.</span>
-                </span>
+                <h1 class="hero--text">Sorry for Inconveinence.<br>
+                    We will update this page as soon as possible.<br>
+                    <a href="index.html" class="home--page">Return to Home Page</a>
                 </h1>
-                <h3 class="arrow--down">
-    				<img src="static/images/arrow_down.png">
-				</h3>
             </div>
         </div>
         <!--hero container end-->
-    </header>
-
-    <div class="main">
-
-        <div class="about">
-            <span>
-        <h2 class="about--heading">About</h2>
-        <p class="about--text">
-        	A Platform Where We Explore Our Technical Skill.
-        	A team which is fully passionate about technology & new ideas and always try to give their best performance.
-        	Coding hub create an environment where college students can show-case their coding , technical and project managing skills.
-        </p>
-        </span>
-        </div>
-
-        <div class="mission">
-            <span>
-                <h2 class="misson--heading">Mission</h2>
-                <p class="mission--text">
-                    Our Mission is to create a fun and supportive environment where we improve programming skills together.
-                    We want to create jolly and diverse community where everyone has a vow and feels comfortable to express it,share their ideas.
-                    We believe learning is more fun and efficient when we help each other along the way.
-                </p>
-            </span>
-        </div>
-
-        <div class="vs">
-            <span>
-                <h2 class="vision--heading">Vision</h2>
-                <p class="vision--text">
-                     Our Vision is to produce individuals who are skilled in their respective fields, dedicated for hard work and determined to achieve success.
-                        <p class="taglines">
-                            Excellence is our Passion.<br>
-                            Patience tests our Dedication.<br>
-                            Performance proves our Success.
-                        </p>
-                </p>
-            </span>
-        </div>
-
-    </div>
     <!--footer container starts-->
     <div class="footer--container">
         <div class="footer">
@@ -155,38 +105,5 @@
             </div>
         </div>
     </div>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156197264-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-156197264-1');
-</script>
-
-    <script src="static/js/particles.js"></script>
-    <script>
-        window.onload = function() {
-            Particles.init({
-                selector: '.header__background',
-                color: '#75A5B7',
-                maxParticles: 100,
-                connectParticles: true,
-                responsive: [{
-                    breakpoint: 768,
-                    options: {
-                        maxParticles: 30
-                    }
-                }, {
-                    breakpoint: 375,
-                    options: {
-                        maxParticles: 50
-                    }
-                }]
-            });
-        };
-    </script>
 </body>
-
 </html>

@@ -191,7 +191,7 @@ li.link.four {
 	color: rgb(0, 0, 0); 
 	line-height: 1; 
 	padding: 12px 20px; 
-	transition: border-color 200ms ease 0s, box-shadow 200ms ease 0s;"
+	transition: border-color 200ms ease 0s, box-shadow 200ms ease 0s;
 }
 .Button1{
 	box-sizing: border-box;
@@ -209,7 +209,7 @@ li.link.four {
 	font-weight: 600; color: rgb(255, 255, 255);
 	line-height: 1;
 	border-radius: 30px;
-	transition: background 200ms ease 0s;"
+	transition: background 200ms ease 0s;
 }
 
 /*footer*/
