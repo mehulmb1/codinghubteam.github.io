@@ -44,12 +44,11 @@ nav.scroll {
 
 .hero--container {
     background-image: linear-gradient(65deg, rgba(26, 32, 218, 0.55), rgba(85, 208, 45, 0.71)), url(../images/hero.png);
-    background-position-x: center;
+    background-position: center;
     display: grid;
     color: rgb(255, 255, 255);
     background-size: cover;
-    height: 120vh;
-    width: 107vw;
+    background-repeat: no-repeat;
 }
 
 .hero--nav {
