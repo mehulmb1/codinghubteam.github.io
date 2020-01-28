@@ -3,7 +3,8 @@ a {
     color: white;
 }
 
-html,body {
+html,
+body {
     margin: 0 auto;
     font-family: Josefin Sans;
     text-rendering: optimizeLegibility;
@@ -44,13 +45,10 @@ nav.scroll {
 }
 
 .hero--container {
-  background-image: linear-gradient(65deg, rgba(26, 32, 218, 0.55), rgba(85, 208, 45, 0.71)), url(../images/hero.png);
+    background-image: linear-gradient(65deg, rgba(26, 32, 218, 0.55), rgba(85, 208, 45, 0.71)), url(../images/hero.png);
     background-position-x: center;
-    display: grid;
     color: rgb(255, 255, 255);
-    background-size: cover;
-    height: 100vh;
-    width: 107vw;
+    background-size: contain;
 }
 
 .hero--nav {
@@ -62,6 +60,7 @@ nav.scroll {
     font-size: 20px;
     align-items: center;
 }
+
 .hero--nav .left {
     display: grid;
     grid-auto-flow: column;
@@ -83,9 +82,9 @@ nav.scroll {
     color: #bbb;
 }
 
-.home{
-    width:50px;
-    height:50px;
+.home {
+    width: 50px;
+    height: 50px;
 }
 
 .hero--nav .link.two {
@@ -106,7 +105,8 @@ li.link.four {
     font-size: 24px;
     margin-top: 13px;
 }
- .hero--text{
+
+.hero--text {
     font-size: 3em;
     /*padding: 2em;*/
     /*margin-left: 31px;*/
@@ -118,13 +118,13 @@ li.link.four {
     text-align: center;
 }
 
-.home--page{
+.home--page {
     text-shadow: 0px 3px 3px black;
     display: block;
     margin-top: 19px;
-    color:rgb(137, 137, 240);
+    color: rgb(137, 137, 240);
     font-size: 1em;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 @keyframes up {
@@ -136,12 +136,13 @@ li.link.four {
         transform: translatey(0px);
     }
 }
+
 /*footer*/
 .footer--container {
     background-image: linear-gradient(40deg, #CCFFFF, #ffcccc);
     padding: 12px;
     text-align: center;
-    bottom:0;
+    bottom: 0;
     width: 100%;
 }
 
@@ -163,18 +164,28 @@ li.link.four {
 
 /* mobile nav */
 @media screen and (max-width: 864px) {
-    .hero--text {
-        font-size: 26px;
-	padding-left:0;
+    section.cordinator {
+        grid-auto-flow: row !important;
     }
 
-    .home{
+    section.members {
+        grid-auto-flow: row !important;
+        grid-template-columns: none !important;
+    }
+
+    .hero--text {
+        font-size: 26px;
+        padding-left: 0;
+    }
+
+    .home {
         font-size: 30px;
     }
 
     nav {
         padding: 0;
     }
+
     .hero--nav {
         grid-template-columns: 68px 234px auto;
     }
@@ -206,7 +217,7 @@ li.link.four {
         z-index: -1;
         background-image: linear-gradient(-45deg, rgb(139, 156, 249), rgb(222, 34, 98));
         transition: all 0.2s ease;
-	opacity: 0;
+        opacity: 0;
     }
 
     .nav-wrapper ul {
@@ -271,7 +282,7 @@ li.link.four {
         display: block;
         width: 30px;
         height: 2px;
-        background:#ffffff;
+        background: #ffffff;
         border-radius: 2px;
         margin-left: 14px;
     }
@@ -338,10 +349,94 @@ li.link.four {
     display: block;
 }
 
+.heading {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 4em;
+}
+
+.main--container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+section.cordinator {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+section.members {
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: center;
+    grid-template-columns: repeat(3, 300px);
+    grid-gap: 20px;
+}
+
+.sub--heading {
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(236, 234, 234);
+    width: 300px;
+    min-height: 250px;
+    margin: 10px;
+    border-radius: 3px;
+    display: grid;
+    position: relative;
+    grid-template-rows: 81% auto;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card .wrapper {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 81%;
+    background-image: linear-gradient(45deg, rgb(255, 152, 0), rgb(233, 30, 99));
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: all 1.2s ease-in-out;
+    text-align: center;
+}
+
+.card:hover .wrapper {
+    display: flex;
+    border-radius: 0px;
+}
+
+.wrapper h3 {
+    margin-bottom: 1px;
+}
+
+.card h2.role {
+    color: rgb(0, 0, 0);
+    align-self: center;
+    margin-bottom: 0;
+}
+
+
 /*
  @media screen and (max-width:900px ){
- 
- 		.main .about{
+
+        .main .about{
                 display: grid;
                 grid-auto-flow: column;
                 width: 600px;
@@ -360,7 +455,7 @@ li.link.four {
                 align-items: center;
                 margin-top: -259px;
             }
-            
+
             .main .vs{
                 display: grid;
                 grid-auto-flow: column;
@@ -371,6 +466,6 @@ li.link.four {
                 align-items: center;
                 margin-top: -259px;
             }
- 
+
  }
         */
