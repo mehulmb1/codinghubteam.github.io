@@ -3,7 +3,8 @@ a {
     color: white;
 }
 
-html,body {
+html,
+body {
     margin: 0 auto;
     font-family: Josefin Sans;
     text-rendering: optimizeLegibility;
@@ -11,11 +12,12 @@ html,body {
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
-  	background-image:linear-gradient(65deg, rgba(26, 32, 218, 0.55), rgba(85, 208, 45, 0.71));
+    background-image: linear-gradient(65deg, rgba(26, 32, 218, 0.55), rgba(85, 208, 45, 0.71));
 }
-.home{
-width:50px;
-height:50px;
+
+.home {
+    width: 50px;
+    height: 50px;
 }
 
 nav {
@@ -98,125 +100,141 @@ nav.scroll {
 
 li.link.four {
     font-size: 24px;
-    margin-top:13px;
-    
+    margin-top: 13px;
+
 }
-.main1{
-	display:grid;
-	padding-top:6em;
-	margin:0 auto;
-	width:100%;
-	height:fit-content;
+
+.main1 {
+    display: grid;
+    padding-top: 6em;
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
 }
-.heading{
-	display:grid;
-	font-size:50px;
+
+.heading {
+    display: grid;
+    font-size: 50px;
     text-shadow: 0px 3px 3px black;
     font-weight: 100;
     margin: 0 auto;
 }
-.detail{
-	display:grid;
-	width:100%;
-	height:fit-content;
-	grid-auto-flow: column;
-	grid-template-columns:800px 150px auto;
-}
-.contact--info{
-	display:grid;
-	width:70%;
-    font-size:25px;
-    line-height: 30px;
-	align-content:center;
-    padding-left: 5em;
-    margin:auto 0px;
-}
-.query{
-    display:grid;
-    width:700px;
-    height:10px;
-    padding-left:3em;
-    margin:auto 0px;
-	font-size:40px;
-}
-.OR{
-	margin:auto 0px;
-	font-size:25px;
-	width:50px;
-}
-.whatsapp{
-	width:40px;
-	height:40px;
-	margin:auto auto;
-}
-.email{
-	height:50px;
-	width:50px;
-}
-.line,.multiline,.buttonline{
-	width:320px;
-}
-.box{
-	height: 48px;
-	width: 320px;
-	margin: auto auto;;
+
+.detail {
+    display: grid;
+    width: 100%;
+    height: fit-content;
+    grid-auto-flow: column;
+    grid-template-columns: 800px 150px auto;
 }
 
-.Input{
-	box-sizing: border-box;
-	z-index: 17;
-	height: 48px;
-	width: 320px;
-	left: 0px;
-	top: 0px;
-	border: 1px solid rgb(227, 227, 227);
-	background-color: rgb(255, 255, 255);
-	border-radius: 40px;
-	font-size: 16px;
-	color: rgb(0, 0, 0);
-	padding: 0px 20px;
-	transition: border-color 200ms ease 0s, box-shadow 200ms ease 0s;
+.contact--info {
+    display: grid;
+    width: 70%;
+    font-size: 25px;
+    line-height: 30px;
+    align-content: center;
+    padding-left: 5em;
+    margin: auto 0px;
 }
-.MultilineInput{
-	box-sizing: border-box; 
-	z-index: 5; 
-	height: 100px; 
-	width:320px; 
-	left: 0px; 
-	top: 0px; 
-	border: 1px solid rgb(227, 227, 227); 
-	background-color: rgb(255, 255, 255); 
-	border-radius: 16px; 
-	font-size: 16px; 
-	color: rgb(0, 0, 0); 
-	line-height: 1; 
-	padding: 12px 20px; 
-	transition: border-color 200ms ease 0s, box-shadow 200ms ease 0s;
+
+.query {
+    display: grid;
+    width: 700px;
+    height: 10px;
+    padding-left: 3em;
+    margin: auto 0px;
+    font-size: 40px;
 }
-.Button1{
-	box-sizing: border-box;
-	z-index: 15;
-	height: 56px;
-	width:320px;
-	left: 0px;
-	top: 0px;
-	padding: 0px;
-	cursor: pointer;
-	background: -webkit-linear-gradient(left,rgb(129, 211, 112) 0%, rgb(47, 109, 222) 100%);
-	border: none;
-	text-align: center;
-	font-size: 18px;
-	font-weight: 600; color: rgb(255, 255, 255);
-	line-height: 1;
-	border-radius: 30px;
-	transition: background 200ms ease 0s;
+
+.OR {
+    margin: auto 0px;
+    font-size: 25px;
+    width: 50px;
+}
+
+.whatsapp {
+    width: 40px;
+    height: 40px;
+    margin: auto auto;
+}
+
+.email {
+    height: 50px;
+    width: 50px;
+}
+
+.line,
+.multiline,
+.buttonline {
+    width: 320px;
+}
+
+.box {
+    height: 48px;
+    width: 320px;
+    margin: auto auto;
+    ;
+}
+
+.Input {
+    box-sizing: border-box;
+    z-index: 17;
+    height: 48px;
+    width: 320px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid rgb(227, 227, 227);
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 0px 20px;
+    transition: border-color 200ms ease 0s, box-shadow 200ms ease 0s;
+}
+
+.MultilineInput {
+    box-sizing: border-box;
+    z-index: 5;
+    height: 100px;
+    width: 320px;
+    left: 0px;
+    top: 0px;
+    border: 1px solid rgb(227, 227, 227);
+    background-color: rgb(255, 255, 255);
+    border-radius: 16px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    line-height: 1;
+    padding: 12px 20px;
+    transition: border-color 200ms ease 0s, box-shadow 200ms ease 0s;
+}
+
+.Button1 {
+    box-sizing: border-box;
+    z-index: 15;
+    height: 56px;
+    width: 320px;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+    cursor: pointer;
+    background: -webkit-linear-gradient(left, rgb(129, 211, 112) 0%, rgb(47, 109, 222) 100%);
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    border-radius: 30px;
+    transition: background 200ms ease 0s;
 }
 
 /*footer*/
 .footer--container {
     background-image: linear-gradient(40deg, #CCFFFF, #ffcccc);
     text-align: center;
-    bottom:0;
+    bottom: 0;
 }
 
 .social {
@@ -232,10 +250,11 @@ li.link.four {
 }
 
 .footer--text {
-	color:black;
+    color: black;
     font-weight: 100;
-    font-size:20px;
+    font-size: 20px;
 }
+
 .footer {
     z-index: -1000;
 }
@@ -244,9 +263,9 @@ li.link.four {
 
     nav {
         padding: 0;
-        top:0em;
-        height:5em;
-        background-image: linear-gradient(90deg,rgb(125, 166, 175),rgb(129, 200, 129));
+        top: 0em;
+        height: 5em;
+        background-image: linear-gradient(90deg, rgb(125, 166, 175), rgb(129, 200, 129));
     }
 
     .hero--nav {
@@ -366,43 +385,53 @@ li.link.four {
     .big-menu {
         display: none !important;
     }
-    .query{
-        padding:0;
-        font-size:30px;
-        width:100%;
-        margin:10px;
+
+    .query {
+        padding: 0;
+        font-size: 30px;
+        width: 100%;
+        margin: 10px;
     }
-    .detail{
-        display:flex;
-        height:fit-content;
+
+    .detail {
+        display: flex;
+        height: fit-content;
         flex-flow: column;
     }
-    .contact--info{
-    order: 3;
-	font-size:20px;
-	align-content:center;
-	margin:10px;
-   	padding:10px;
+
+    .contact--info {
+        order: 3;
+        font-size: 20px;
+        align-content: center;
+        margin: 10px;
+        padding: 10px;
     }
-	.OR{
+
+    .OR {
         order: 2;
-	margin:10px auto;
-	font-size:20px;
+        margin: 10px auto;
+        font-size: 20px;
     }
-    .Form1{
+
+    .Form1 {
         order: 1;
-        margin:10px;
-        padding-top:40px;
+        margin: 10px;
+        padding-top: 40px;
     }
-	.whatsapp{
-	width:20px;
-	height:20px;
-	margin:10px auto;
-	}
-	.Form1,.line,.multiline,.buttonline{
-	display:block;
-	margin:3%;
-	}
+
+    .whatsapp {
+        width: 20px;
+        height: 20px;
+        margin: 10px auto;
+    }
+
+    .Form1,
+    .line,
+    .multiline,
+    .buttonline {
+        display: block;
+        margin: 3%;
+    }
 }
 
 #nav:checked+.nav-btn {

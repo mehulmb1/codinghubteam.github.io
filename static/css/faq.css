@@ -4,7 +4,6 @@ a {
 }
 
 html,body {
-    width:100%;
     margin: 0 auto;
     font-family: Josefin Sans;
     text-rendering: optimizeLegibility;
@@ -45,7 +44,7 @@ nav.scroll {
 }
 
 .hero--container {
-  background-image: linear-gradient(65deg, rgba(26, 32, 218, 0.55), rgba(85, 208, 45, 0.71)), url(../images/hero.png);
+    background-image: linear-gradient(65deg, rgba(26, 32, 218, 0.55), rgba(85, 208, 45, 0.71)), url(../images/hero.png);
     background-position-x: center;
     display: grid;
     color: rgb(255, 255, 255);
@@ -63,6 +62,7 @@ nav.scroll {
     font-size: 20px;
     align-items: center;
 }
+
 .hero--nav .left {
     display: grid;
     grid-auto-flow: column;
@@ -83,10 +83,11 @@ nav.scroll {
 .hero--nav .link:hover {
     color: #bbb;
 }
-.home{
-    width:50px;
-    height:50px;
-    }
+
+.home {
+    width: 50px;
+    height: 50px;
+}
 
 .hero--nav .link.two {
     font-size: 24px;
@@ -108,7 +109,7 @@ li.link.four {
 }
 
 
- .hero--text{
+.hero--text {
     font-size: 3em;
     text-shadow: 0px 3px 3px black;
     align-self: center;
@@ -117,13 +118,13 @@ li.link.four {
     text-align: center;
 }
 
-.home--page{
+.home--page {
     text-shadow: 0px 3px 3px black;
     display: block;
     margin-top: 19px;
-    color:rgb(137, 137, 240);
+    color: rgb(137, 137, 240);
     font-size: 1em;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 /*main*/
@@ -205,12 +206,13 @@ li.link.four {
     width:250px;
     height:250px;
 }
+
 /*footer*/
 .footer--container {
     background-image: linear-gradient(40deg, #CCFFFF, #ffcccc);
     padding: 12px;
     text-align: center;
-    bottom:0;
+    bottom: 0;
     width: 100%;
 }
 
@@ -234,16 +236,17 @@ li.link.four {
 @media screen and (max-width: 864px) {
     .hero--text {
         font-size: 26px;
-	padding-left:0;
+        padding-left: 0;
     }
 
-    .home{
+    .home {
         font-size: 30px;
     }
 
     nav {
         padding: 0;
     }
+
     .hero--nav {
         grid-template-columns: 68px 234px auto;
     }
@@ -275,7 +278,7 @@ li.link.four {
         z-index: -1;
         background-image: linear-gradient(-45deg, rgb(139, 156, 249), rgb(222, 34, 98));
         transition: all 0.2s ease;
-	opacity: 0;
+        opacity: 0;
     }
 
     .nav-wrapper ul {
@@ -340,7 +343,7 @@ li.link.four {
         display: block;
         width: 30px;
         height: 2px;
-        background:#ffffff;
+        background: #ffffff;
         border-radius: 2px;
         margin-left: 14px;
     }
@@ -438,4 +441,3 @@ li.link.four {
 .big-menu {
     display: block;
 }
-
