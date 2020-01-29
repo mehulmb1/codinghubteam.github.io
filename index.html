@@ -20,6 +20,46 @@
     <meta property="og:locale" content="en">
     <script src="static/js/main.js">
     </script>
+    <style type="text/css">
+        .exams{
+            display: grid;
+            grid-gap: 3px;
+            position: relative;
+            z-index: 100;
+        }
+        .extend{
+            display: none;
+            background-color: orange;
+        }
+
+        .exams:hover .extend {
+            text-align: center;
+            display: grid;
+            position: absolute;
+            width: 120px;
+            grid-gap: 9px;
+            top: 30px;
+            left: -43px;
+            background: rgb(127, 255, 212);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .extend {
+            display: none;
+            background-color: rgba(76, 175, 80, 0);
+            transition: all .5s ease;
+        }
+        .extend::before{
+            content:'';
+            position: absolute;
+            top: 13px;
+            background-color: indianred;
+            margin-left: -5px;
+            top: -9px;
+            left: 45%;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -50,6 +90,20 @@
                         <li class="link one"><a href="/">Coding Hub</a></li>
                         <div class="big-menu">
                             <div class="left">
+                                <div class="exams">    
+                                <li class="exam">Exam</li>
+                                <div class="extend">
+                                    <a href="/crosscode.html">
+                                    <li>Cross Code</li>
+                                    </a>
+                                    <a href="/codebuster.html">
+                                    <li>Code Buster</li>
+                                    </a>
+                                    <a href="/youonweb.html">
+                                    <li>You On Web</li>
+                                    </a>
+                                </div>
+                            </div>
                                 <a href="/events.html">
                                     <li class="link two">Events</li>
                                 </a>
