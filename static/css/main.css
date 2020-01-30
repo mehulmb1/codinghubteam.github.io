@@ -246,7 +246,7 @@ h2.vision--heading {
 img.about--img, .mission--img, .vision--img {
     position: absolute;
     width: 500px;
-    height: 295px;
+    height: 300px;
     right: -35em;
     top: 5%;
     border-radius: 5px;
@@ -259,6 +259,17 @@ img.mission--img {
 img.vision--img {
     height: 300px;
 
+}
+.glow{
+    animation: glow 1s ease-in infinite alternate;
+}
+@keyframes glow{
+    from{
+        text-shadow: 0 0 9px #fff, 0 0 8px #fff, 0 0 10px #4CAF50, 0 0 7px #4CAF50, 0 0 8px #4CAF50, 0 0 8px #4CAF50, 0 0 6px #4CAF50;
+    }
+    to{
+        text-shadow: 0 0 11px #fff, 0 0 9px #009688, 0 0 11px #009688, 0 0 10px #009688, 0 0 9px #009688, 0 0 14px #009688, 0 0 13px #009688;
+    }
 }
 
 /*footer*/
