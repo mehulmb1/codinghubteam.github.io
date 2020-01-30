@@ -54,6 +54,7 @@ nav.scroll {
     background-size: cover;
     height: 100vh;
     width: 107vw;
+    background-attachment: fixed;
 }
 
 .hero--nav {
@@ -79,24 +80,45 @@ nav.scroll {
     position: relative;
     width: 68%;
     border-radius: 50%;
-    top: -9px;
+    top: -6px;
     right: -7px;
 }
 
-.hero--nav .link:hover {
-    color: #bbb;
+
+.hero--nav .link{
+  position: relative;
+  text-shadow: none;
 }
 
+.hero--nav .link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(66, 105, 230);
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.5s ease;
+}
+
+.hero--nav .link:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+
+.hero--nav .one {
+    font-size: 42px;
+}
 .hero--nav .link.two {
     font-size: 24px;
 }
 
 .hero--nav .link.three {
     font-size: 24px;
-}
-
-.hero--nav .link.one {
-    font-size: 42px;
 }
 
 li.link.four {
@@ -170,6 +192,7 @@ li.link.five {
     width: 600px;
     background-image: url(../images/star-bg.svg);
     background-size: contain;
+    position: relative;
 
 }
 .about{
@@ -220,6 +243,24 @@ h2.vision--heading {
     color: white;
 }
 
+img.about--img, .mission--img, .vision--img {
+    position: absolute;
+    width: 500px;
+    height: 295px;
+    right: -35em;
+    top: 5%;
+    border-radius: 5px;
+}
+
+img.mission--img {
+    left: -36em;
+}
+
+img.vision--img {
+    height: 300px;
+
+}
+
 /*footer*/
 .footer--container {
     background-image: linear-gradient(40deg, #CCFFFF, #ffcccc);
@@ -257,6 +298,9 @@ h2.vision--heading {
     }
     .main .about, .mission, .vs{
         width: auto !important;
+    }
+    img.about--img, .mission--img, .vision--img {
+        display: none;
     }
     .hero--text {
         font-size: 50px;

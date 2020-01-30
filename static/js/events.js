@@ -8,6 +8,7 @@ function filterSelection(c) {
     var x, i, y;
     x = document.getElementsByClassName("column");
     y = document.getElementsByClassName("ruleslink");
+    z = document.getElementsByClassName("rules");
     for (i = 0; i < x.length; i++) {
       w3RemoveClass(x[i], "show");
       if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
@@ -15,6 +16,10 @@ function filterSelection(c) {
     for (i = 0; i < y.length; i++) {
       w3RemoveClass(y[i], "show");
       if (y[i].className.indexOf(c) > -1) w3AddClass(y[i], "show");
+    }
+    for (i = 0; i < z.length; i++) {
+      w3RemoveClass(z[i], "show");
+      if (z[i].className.indexOf(c) > -1) w3AddClass(z[i], "show");
     }
   }
 
