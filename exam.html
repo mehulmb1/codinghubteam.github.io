@@ -9,6 +9,21 @@
     <link rel="apple-touch-icon" type="image/png" href="static/images/hub.jpg">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="static/css/exam.css" rel="stylesheet">
+    <script>
+        function checkpassword(){
+            var password=document.getElementById("password");
+            if(password.value!="iamcoder")
+            {
+                alert("You entered wrong password");
+                password.value="";
+                password.focus();
+            }
+            else{
+                var winFeature ='location=no,toolbar=no,menubar=no,titlebar=no,scrollbars=yes,fullscreen=yes';
+                window.open('startpage.html','_blank',winFeature);
+            }
+        }
+    </script>
     <script type="text/javascript" src="static/js/events.js"></script>
     <style type="text/css">
         .exams{
@@ -48,7 +63,42 @@
             top: -9px;
             left: 45%;
         }
+        label{
+            font-size:30px;
+            color:#100756;
+            z-index:15;
+            padding:10px;
+        }
+        #password{
+            box-sizing: border-box;
+            width:auto;
+            height:50px;
+            margin:10px;
+            z-index:15;
+            border: 1px solid orange;
+            background: -webkit-linear-gradient(left,#ecda0c 0%,#fffeff 100%);
+            border-radius: 40px;
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            padding: 0px 20px;
+            transition: border-color 200ms ease 0s, box-shadow 200ms ease 0s;
+            right:100px;
+        }
 
+        #Start{
+            box-sizing: border-box;
+            height: 56px;
+            width:300px;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            font-size: 18px;
+            background: -webkit-linear-gradient(left,#ec272d 0%,#ecda0c 100%);
+            font-weight: 600; color: rgb(255, 255, 255);
+            line-height: 1;
+            border-radius: 30px;
+            transition: 200ms ease 0s;
+        }
     </style>
 </head>
 
@@ -75,6 +125,16 @@
         </div>
 
         <h1 class="soon">Coming Soon on 6th feb</h1>
+        <div>
+                <label for='password'>Enter password for playing sample wordpuzzle :
+                    <input type='password' name='Password' id='password' placeholder="Password" required>
+                </label>
+                <div class="buttonline" style="height:56px;margin-top:20px;">
+                    <div class="buttonbox" 	style="height:56px;width:320px;margin: 0 auto;">
+                        <input type="button" id="Start" value="Start Game" onclick="checkpassword()">
+                    </div>
+                </div>
+        </div>
         <!--
         <section class="instruction">
             <div class="rules cc hide">
