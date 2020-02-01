@@ -148,7 +148,7 @@ $(document).ready(function() {
 
 var drawboard=function(){
 	// put random letters on the board
-	//choosewords();
+	choosewords();
 	//words_list=words_list.sort(sortByLengthDesc);
 	for (var i = 0; i < size; i++) {
 		$(".letters").append("<span class='" + (i + 1) + "'>" + 
