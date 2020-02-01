@@ -64,7 +64,7 @@ function sendData(sec){
   // Set the date we're counting down to
 var countDown = new Date().getTime();
   //console.log(countDown);
-countDown+=(/*(1000*60)*10+*/2000);		//1000*60 = 1 min.
+countDown+=((1000*60)*10+2000);		//1000*60 = 1 min.
 // Update the count down every 1 second;
   var x = setInterval(function() {
     // Get today's date and time
@@ -152,8 +152,8 @@ var drawboard=function(){
 	//words_list=words_list.sort(sortByLengthDesc);
 	for (var i = 0; i < size; i++) {
 		$(".letters").append("<span class='" + (i + 1) + "'>" + 
-							//getRandomLetter() + "</span>");
-							' ' +"</span>");
+							getRandomLetter() + "</span>");
+							//' ' +"</span>");
 	}
 	// insert the words onto the board
 	for(var i=0;i<words_list.length;i++){
