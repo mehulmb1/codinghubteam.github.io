@@ -1,35 +1,70 @@
 var score_value=0;
+var bonus=false;
 
 function getUrlVars() {
 	var vars = {};
-	var url=window.location.href;
-	console.log(url);
-	var parts = url.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+	var URL=window.location.href;
+	var parts = URL.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(m,key,value) {
 		vars[key] = value;
 	});
-	console.log(url);
 	return vars;
 }
 
 function sendData(sec){
-	var data=getUrlVars();
-	data["Time"]=sec;
-	data["Score"]=score_value;
-	//https://formspree.io/mqkqappj
-	$(".final").append("<form action='https://formspree.io/mqkqappj' method='POST'><label for='team' id='lteam'>Team No. :<input type='text' name='Team' class='Data' id='team' readonly='readonly' value="+ data["Team"]
-	+"></label><input type='text' name='Name' class='Data' id='name' readonly='readonly' value="+ data["Name"]
-	+"><label for='time' id='ltime'>Time taken(in secs) :<input type='text' name='Time' class='Data' id='time' readonly='readonly' value="+ data["Time"]
-	+"></label><label for='scored' id='lscore'>Your Score :<input type='text' name='Score' class='Data' id='scored' readonly='readonly' value="+ data["Score"]
-	+"></label><input type='submit' value='End Game' class='Data' id='submit'></form>"
+	var Data=getUrlVars();
+	Data["Email"]=decodeURIComponent(Data["Email"]);
+	Data["Time"]=sec;
+	Data["Score"]=score_value;
+	if(!bonus)
+	Data["Bonus"]="NO";
+	else
+	Data["Bonus"]="YES";
+	console.log(Data);
+
+	$(".final").append("<form id='testform' role='form'><label for='team' id='lteam'>Team No. :<input type='text' name='Team' class='Data' id='team' readonly='readonly' value="+ Data["Team"]
+	+"></label><input type='text' name='Name' class='Data' id='name' readonly='readonly' value="+ Data["Name"]
+	+"></label><input type='text' name='Email-ID' class='Data' id='email' readonly='readonly' value="+ Data["Email"]
+	+"><label for='time' id='ltime'>Time taken(in secs) :<input type='text' name='Time' class='Data' id='time' readonly='readonly' value="+ Data["Time"]
+	+"></label><label for='scored' id='lscore'>Your Score :<input type='text' name='Score' class='Data' id='scored' readonly='readonly' value="+ Data["Score"]
+	+"></label><label for='bonus' id='lbonus'>Got Bonus :<input type='text' name='Bonus' class='Data' id='scored' readonly='readonly' value="+ Data["Bonus"]
+	+"></label><button type='submit' class='Data' id='submit'>End Game</button></form>"
 	);
+
+	$('#submit').on('click', function(e) {
+	e.preventDefault();
+
+	// Get the form instance
+	var $form = $('#testform');
+
+	// Get the BootstrapValidator instance
+	//var bv = $form.data('bootstrapValidator');
+
+	// Use Ajax to submit form data
+	var url = "https://script.google.com/macros/s/AKfycbz1keXBGyXd5ILdZQIm6amTpeMAfiz-eDB-XdtsfDCdvn4t6yGz/exec";
+	var redirectUrl = 'feedback.html';
+	// show the loading 
+	//$('#postForm').prepend($('<span></span>').addClass('glyphicon glyphicon-refresh glyphicon-refresh-animate'));
+	var jqxhr = $.get(url, $form.serialize(), function(data) {
+		console.log("Success! Data: " + data.statusText);
+		$(location).attr('href',redirectUrl);
+	})
+	.fail(function(data){
+		console.warn("Error! Data: " + data.statusText);
+		// HACK - check if browser is Safari - and redirect even if fail b/c we know the form submits.
+		if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
+			//alert("Browser is Safari -- we get an error, but the form still submits -- continue.");
+			$(location).attr('href',redirectUrl);                
+		}
+	});
+	})
 }
 
 //CLOCK
 
   // Set the date we're counting down to
-  var countDown = new Date().getTime();
+var countDown = new Date().getTime();
   //console.log(countDown);
-  countDown+=((1000*60)*10 +3000);
+countDown+=(/*(1000*60)*10+*/2000);		//1000*60 = 1 min.
 // Update the count down every 1 second;
   var x = setInterval(function() {
     // Get today's date and time
@@ -54,14 +89,14 @@ function sendData(sec){
           document.getElementById("second").innerHTML = '0';
 		  timeup()
 		  sendData(600);
-          $(".result").append("<span id='mintime'>Time required: 10 minutes.</span>");
+          $(".result").append("<br><span id='mintime'>Time required: 10 minutes.</span>");
     } 
 },750);
 
 function timeup() {
 	$(".final").append("<div class='container'></div>");
 	$(".container").append("<div class='balloon' id='one'></div><div class='balloon' id='two'></div><div class='congrats'><img src='static/images/clock.gif' class='img-clock'></div><div class='balloon' id='three'></div><div class='balloon' id='four'></div>");
-	$(".container").append("<h1 style='margin-left:200px'>Time UP! Nice Try</h1>");
+	$(".container").append("<h1 style='margin-left:315px'>Time UP! Nice Try</h1>");
 	//$(".balloon").append("<img src='static/images/logo.png' class='logo'>");
 }
 
@@ -70,12 +105,18 @@ function timeup() {
 const x_factor=20;		//for no. of rows and columns
 const z_factor=16;		//for size of each cell
 var allwords = ["INHERITANCE","POLYMORPHISM","ENCAPSULATION","ABSTRACTION","VIRTUAL","OBJECT","CLASS",
-				"FUNCTION","NAMESPACE","TEMPLATE","VARIABLES","TYPENAME","TYPEDEF","IMPORT","INCLUDE",
+				"FUNCTION","NAMESPACE","TEMPLATE","VARIABLE","TYPENAME","TYPEDEF","IMPORT","INCLUDE",
 				"STRUCT","RETURN","OPERATOR","DOUBLE","EXPLICIT","CONSTANT","ARRAY","STACK","QUEUE",
 				"GRAPH","VECTOR","BREAK","CONTINUE","SWITCH","DEFAULT","SIZEOF","STATIC","UNION",
 				"VOLATILE","THROW","CATCH","DELETE","FRIEND","INLINE","WHILE","FINALLY","GLOBAL",
 				"RANGE","ASSERT","EXCEPT","ABSTRACT","EXTENDS","NATIVE","PUBLIC","PRIVATE",
-				"PROTECTED","INTERFACE","SUPER","INSTANCEOF","IMPLEMENTS","ENSURE","MODULE","PACKAGES"];
+				"PROTECTED","INTERFACE","SUPER","IMPLEMENTS","ENSURE","MODULE","PACKAGE",
+				"YIELD","RAISE","LAMBDA","IDENTIFIER","LITERAL","FLOAT","PRINT","INPUT","TUPLE",
+				"DICTIONARY","DATATYPE","UPDATE","STRING","REPLACE","SPLIT","STRIP","LIST","METHOD",
+				"FLOOR","RANDOM","DATAMEMBER","INSTANCE","CONSTRUCTOR","EXCEPTION","DESTRUCTOR",
+				"IMPLICIT","BINDING","IOSTREAM","VECTOR","QUEUE","DQUEUE","FSTREAM","MUTABLE","EXPORT",
+				"EXTERN","REGISTER","POINTER","ITERATOR","MULTISET","MULTIMAP","REMOVE","GETLINE","RUNTIME",
+				"COMPILER","DYNAMIC"];
 var words_list=["CODINGHUB"];
 
 const size=x_factor*x_factor;
@@ -107,12 +148,12 @@ $(document).ready(function() {
 
 var drawboard=function(){
 	// put random letters on the board
-	choosewords();
+	//choosewords();
 	//words_list=words_list.sort(sortByLengthDesc);
 	for (var i = 0; i < size; i++) {
 		$(".letters").append("<span class='" + (i + 1) + "'>" + 
-							getRandomLetter() + "</span>");
-							//' ' +"</span>");
+							//getRandomLetter() + "</span>");
+							' ' +"</span>");
 	}
 	// insert the words onto the board
 	for(var i=0;i<words_list.length;i++){
@@ -127,7 +168,7 @@ var drawboard=function(){
 		if(i!=0)
 			$(".words").append("<span class='" + (i) + "'>" +  words[i].word + "</span>");
 		else
-		$(".words").append("<span class='0'> Guess word?</span>");
+		$(".words").append("<span class='0' style='font-size:1.3em;color:red;'> Guess word?</span>");
 	}
 	$("#menu").on("mouseup", function() {
 		$(this).css( {"display": "none"})
@@ -620,7 +661,7 @@ $(document).ready(function() {
 						min = Math.floor(sec / 60);
 						//console.log(min);
 						sec = sec % 60;
-						$(".result").append("<span id='mintime'>Time required :  "+ min +" minutes "+ sec +" seconds</span>");
+						$(".result").append("<br><span id='mintime'>Time required :  "+ min +" minutes "+ sec +" seconds</span>");
 					}
 				}
 			}
@@ -635,7 +676,7 @@ $(document).ready(function() {
 function congratulate() {
 	$(".final").append("<div class='container'></div>");
 	$(".container").append("<div class='balloon' id='one'></div><div class='balloon' id='two'></div><div class='congrats'><img src='static/images/trophy.png' class='img-trophy'></div><div class='balloon' id='three'></div><div class='balloon' id='four'></div>");
-	$(".container").append("<h1 style='margin-left:220px;'>Congratulations</h1>");
+	$(".container").append("<h1 style='margin-left:220px;'>CONGRATULATIONS!!</h1>");
 	//$(".balloon").append("<img src='static/images/logo.png' class='logo'>");
 }
 
@@ -819,7 +860,11 @@ function scratchWord() {
 			if(i!=0)
 				score_value++;
 			else
-				score_value+=5;
+				{
+					alert("Nice work CHAMPION !!!" + "\n" + "Word Guessed correctly." + "\n" +"5 bonus points awarded.");
+					bonus=true;
+					$(".result").append("<span id='bonus' style='font-size:65px;color:red;margin-left:3px;'>+5</span>");
+				}
 			var score=document.getElementById("score");
 			score.innerHTML=score_value;
 		}
@@ -830,10 +875,14 @@ function scratchWord() {
 function disablekeys(e) { 
 	if (((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82)
 		||	((e.ctrlKey || e.metaKey) && e.keyCode === 70)
-		||	(e.shiftKey))
+		||	(e.shiftKey) ||((e.which || e.keyCode)==123))
 	 return false;
 };
 
-function isEndOfGame(){
-	return pos.every(function(o) { return o.start === 0 && o.end === 0; });
+function isEndOfGame()
+{
+	var end=false;
+	if(score_value==x_factor || pos.every(function(o) { return o.start === 0 && o.end === 0; }))
+	end=true;
+	return end; 
 }

@@ -2,11 +2,13 @@
 <head>
   	<meta charset="utf-8">
   	<title>Word Puzzle!</title>
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fresca">
+    <ink rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fresca">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Happy+Monkey">
-      <script src="static/js/jquery.min.js"></script>
-      <link rel="stylesheet" href="static/css/puzzle.css">
-      <script src="static/js/puzzle.js"></script>
+    <link rel="icon" type="image/png" href="static/images/hub.jpg">
+    <link rel="apple-touch-icon" type="image/png" href="static/images/hub.jpg">
+    <script src="static/js/jquery.min.js"></script>
+    <link rel="stylesheet" href="static/css/puzzle.css">
+    <script src="static/js/puzzle.js"></script>
 </head>
 <body>
   <div class="final">
@@ -26,7 +28,7 @@
             <div class="smalltext">Minutes</div> 
           </div> 
           <div> 
-            <span class="seconds" id="second">3</span> 
+            <span class="seconds" id="second">2</span> 
             <div class="smalltext">Seconds</div> 
           </div>
         </div>
@@ -39,7 +41,6 @@
         Score:
         <br>
         <span id="score">0</span><span id="outof">/20</span>
-        <br>
       </div>
     </div>
   </div>
@@ -50,9 +51,9 @@
     };
 
     //prompt before refreshing
-    window.onbeforeunload = function() {
+    /*window.onbeforeunload = function() {
       return "You cannot refresh this page";
-    }
+    }*/
   </script>
 </body>
 </html>
