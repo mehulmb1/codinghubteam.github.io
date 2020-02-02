@@ -352,6 +352,7 @@ img.vision--img {
 
     nav {
         padding: 0;
+        transition: none;
     }
 
     .laptop {

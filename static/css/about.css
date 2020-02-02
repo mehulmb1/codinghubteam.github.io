@@ -216,6 +216,7 @@ li.link.four {
 
     nav {
         padding: 0;
+        transition: none;
     }
 
     .hero--nav {
