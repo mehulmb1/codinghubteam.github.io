@@ -160,10 +160,11 @@ canvas {
 }
 h1{
 	background: -webkit-linear-gradient(#fdd536, #a65800);
+	background-clip: text;
 	-webkit-background-clip:text;
 	-webkit-text-fill-color:transparent;
 	transform-origin: bottom center;
-    margin-top: 140px;
+	padding-top:240px;
     font-size:75px;
     animation: congratulation 1s linear 1;
     position: absolute;

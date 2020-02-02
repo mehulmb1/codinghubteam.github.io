@@ -23,7 +23,7 @@ function sendData(sec){
 
 	$(".final").append("<form id='testform' role='form'><label for='team' id='lteam'>Team No. :<input type='text' name='Team' class='Data' id='team' readonly='readonly' value="+ Data["Team"]
 	+"></label><input type='text' name='Name' class='Data' id='name' readonly='readonly' value="+ Data["Name"]
-	+"></label><input type='text' name='Email-ID' class='Data' id='email' readonly='readonly' value="+ Data["Email"]
+	+"></label><input type='text' name='Email' class='Data' id='email' readonly='readonly' value="+ Data["Email"]
 	+"><label for='time' id='ltime'>Time taken(in secs) :<input type='text' name='Time' class='Data' id='time' readonly='readonly' value="+ Data["Time"]
 	+"></label><label for='scored' id='lscore'>Your Score :<input type='text' name='Score' class='Data' id='scored' readonly='readonly' value="+ Data["Score"]
 	+"></label><label for='bonus' id='lbonus'>Got Bonus :<input type='text' name='Bonus' class='Data' id='scored' readonly='readonly' value="+ Data["Bonus"]
@@ -114,7 +114,7 @@ var allwords = ["INHERITANCE","POLYMORPHISM","ENCAPSULATION","ABSTRACTION","VIRT
 				"YIELD","RAISE","LAMBDA","IDENTIFIER","LITERAL","FLOAT","PRINT","INPUT","TUPLE",
 				"DICTIONARY","DATATYPE","UPDATE","STRING","REPLACE","SPLIT","STRIP","LIST","METHOD",
 				"FLOOR","RANDOM","DATAMEMBER","INSTANCE","CONSTRUCTOR","EXCEPTION","DESTRUCTOR",
-				"IMPLICIT","BINDING","IOSTREAM","VECTOR","QUEUE","DQUEUE","FSTREAM","MUTABLE","EXPORT",
+				"IMPLICIT","BINDING","IOSTREAM","VECTOR","QUEUE","DEQUE","FSTREAM","MUTABLE","EXPORT",
 				"EXTERN","REGISTER","POINTER","ITERATOR","MULTISET","MULTIMAP","REMOVE","GETLINE","RUNTIME",
 				"COMPILER","DYNAMIC"];
 var words_list=["CODINGHUB"];
@@ -832,6 +832,7 @@ function setPos(x, y, loc) {
 // to highlight a word starting from last letter to first this function
 // will also support that ability
 function checkWord() {
+	go_to_fullscreen();
 	// clears the pos array so that a player cannot highlight the same word twice
 	function clearPos(p) {
 		p.start = p.end = 0;
@@ -875,7 +876,7 @@ function scratchWord() {
 function disablekeys(e) { 
 	if (((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82)
 		||	((e.ctrlKey || e.metaKey) && e.keyCode === 70)
-		||	(e.shiftKey) ||((e.which || e.keyCode)==123))
+		||	(e.shiftKey) ||((e.which || e.keyCode)==123) || e.keyCode==27)
 	 return false;
 };
 
@@ -886,3 +887,16 @@ function isEndOfGame()
 	end=true;
 	return end; 
 }
+
+function go_to_fullscreen(){
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    }
+};

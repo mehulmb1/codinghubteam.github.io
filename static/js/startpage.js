@@ -2,6 +2,19 @@ var startGame=function(){
     document.getElementById('Start').disabled='disabled';
 };
 
+function go_full_screen(){
+    var elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    }
+}
+
 var allmails=["master@gmail.com","hacker@gmail.com","coder@gmail.com"]
 
 
@@ -20,6 +33,7 @@ function validate(){
             console.log("Your Team no is:"+(a+1));
             var team=document.getElementById("team");
             team.value=a+1;
+            go_full_screen();
         }
     }
     else{
@@ -27,3 +41,4 @@ function validate(){
         mail.focus();
     }
 }
+
