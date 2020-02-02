@@ -18,6 +18,9 @@ body {
 .home {
     width: 50px;
     height: 50px;
+    filter: invert(1);
+    position: relative;
+    top: -5px;
 }
 
 nav {
@@ -27,7 +30,7 @@ nav {
     width: 100%;
     box-sizing: border-box;
     padding: 12px 18px;
-    transition: background-color 0.4s ease-out;
+    transition: all 0.3s ease-in-out;
 }
 
 nav.scroll {
@@ -54,7 +57,7 @@ nav.scroll {
 .hero--nav {
     display: grid;
     color: white;
-    grid-template-columns: 100px 234px auto;
+    grid-template-columns: 100px 260px auto;
     list-style-type: none;
     text-shadow: 0px 3px 3px black;
     font-size: 20px;
@@ -77,8 +80,10 @@ nav.scroll {
     top: -9px;
     right: -7px;
 }
+
 .hero--nav .one {
-    font-size: 42px;
+    font-size: 47px;
+    text-shadow: 3px 3px #00000042;
 }
 
 .hero--nav .link.two {
@@ -97,28 +102,29 @@ li.link.four {
     margin-top: 13px;
 
 }
-.hero--nav .link{
-  position: relative;
-  text-shadow: none;
+
+.hero--nav .link {
+    position: relative;
+    text-shadow: none;
 }
 
 .hero--nav .link::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: rgb(66, 105, 230);
-  transform-origin: bottom right;
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(-45deg, rgb(7, 234, 182), rgb(0, 103, 225));
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
 }
 
 .hero--nav .link:hover::before {
-  transform-origin: bottom left;
-  transform: scaleX(1);
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
 
 .main1 {
@@ -277,6 +283,12 @@ li.link.four {
 }
 
 @media screen and (max-width: 864px) {
+    .hero--nav .one {
+        font-size: 42px;
+        text-shadow: 3px 3px #00000042;
+        position: relative;
+        top: 4px;
+    }
 
     nav {
         padding: 0;

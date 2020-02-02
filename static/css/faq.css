@@ -3,7 +3,8 @@ a {
     color: white;
 }
 
-html,body {
+html,
+body {
     margin: 0 auto;
     font-family: Josefin Sans;
     text-rendering: optimizeLegibility;
@@ -28,7 +29,7 @@ nav {
     width: 100%;
     box-sizing: border-box;
     padding: 12px 18px;
-    transition: background-color 0.4s ease-out;
+    transition: all 0.3s ease-in-out;
 }
 
 nav.scroll {
@@ -39,29 +40,30 @@ nav.scroll {
     z-index: 10;
 }
 
-.hero--nav .link{
-  position: relative;
-  text-shadow: none;
+.hero--nav .link {
+    position: relative;
+    text-shadow: none;
 }
 
 .hero--nav .link::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: rgb(66, 105, 230);
-  transform-origin: bottom right;
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(-45deg, rgb(7, 234, 182), rgb(0, 103, 225));
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
 }
 
 .hero--nav .link:hover::before {
-  transform-origin: bottom left;
-  transform: scaleX(1);
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
+
 .hero {
     display: grid;
 }
@@ -72,14 +74,14 @@ nav.scroll {
     display: grid;
     color: rgb(255, 255, 255);
     background-size: cover;
-    height:auto;
+    height: auto;
     width: 107vw;
 }
 
 .hero--nav {
     display: grid;
     color: white;
-    grid-template-columns: 100px 234px auto;
+    grid-template-columns: 100px 260px auto;
     list-style-type: none;
     text-shadow: 0px 3px 3px black;
     font-size: 20px;
@@ -106,10 +108,14 @@ nav.scroll {
 .home {
     width: 50px;
     height: 50px;
+    filter: invert(1);
+    position: relative;
+    top: -5px;
 }
 
 .hero--nav .one {
-    font-size: 42px;
+    font-size: 47px;
+    text-shadow: 3px 3px #00000042;
 }
 
 .hero--nav .link.two {
@@ -153,31 +159,32 @@ li.link.four {
     margin-top: 100px;
 }
 
-.heading{
-    font-size:50px;
+.heading {
+    font-size: 50px;
     text-align: center;
 }
-#myBtnContainer{
+
+#myBtnContainer {
     text-align: center;
     margin-top: 10px;
 }
 
-.btn{
+.btn {
     box-sizing: border-box;
     z-index: 15;
     height: 56px;
-    width:250px;
+    width: 250px;
     left: 0px;
     top: 0px;
     padding: 0px;
     border: none;
     outline: none;
-    background-color:white;
+    background-color: white;
     cursor: pointer;
     text-align: center;
     font-size: 18px;
     font-weight: 600;
-    color:rgb(116, 115, 115);
+    color: rgb(116, 115, 115);
     line-height: 1;
     border-radius: 30px;
 }
@@ -192,38 +199,46 @@ li.link.four {
     color: white;
     cursor: default;
 }
+
 .shadow:hover {
     box-shadow: 2px 4px #00000078;
     transition: 1.9ms ease-in;
 }
-.row{
-    display:none;
-} 
+
+.row {
+    display: none;
+}
+
 .column {
     margin: 10px 10px;
 }
-.show{
+
+.show {
     display: block;
 }
-.question{
-    color:rgb(239, 228, 102);
-    font-size:25px;
-    margin-top:30px;
-    margin-bottom:10px;
+
+.question {
+    color: rgb(239, 228, 102);
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
-.Ans{
-    color:#ad0d0d;
-    font-size:23px;
+
+.Ans {
+    color: #ad0d0d;
+    font-size: 23px;
 }
-.answer{
-    color:black;
-    font-size:20px;
-    margin:15px;
+
+.answer {
+    color: black;
+    font-size: 20px;
+    margin: 15px;
 }
-#puzzle{
-    float:right;
-    width:250px;
-    height:250px;
+
+#puzzle {
+    float: right;
+    width: 250px;
+    height: 250px;
 }
 
 /*footer*/
@@ -253,6 +268,13 @@ li.link.four {
 
 /* mobile nav */
 @media screen and (max-width: 864px) {
+    .hero--nav .one {
+        font-size: 42px;
+        text-shadow: 3px 3px #00000042;
+        position: relative;
+        top: 4px;
+    }
+
     .hero--text {
         font-size: 26px;
         padding-left: 0;
@@ -383,37 +405,42 @@ li.link.four {
     .big-menu {
         display: none !important;
     }
-    #myBtnContainer{
-        text-align:justify;
-        margin:10px;
-        width:100%;
+
+    #myBtnContainer {
+        text-align: justify;
+        margin: 10px;
+        width: 100%;
     }
+
     .btn {
         text-align: center;
-        width:110px;
+        width: 110px;
         border: none;
         outline: none;
         background-color: white;
         cursor: pointer;
         border-radius: 7px;
-        margin-top:10px;
-        font-size:15px;
+        margin-top: 10px;
+        font-size: 15px;
         border-radius: 50px;
     }
-    .question{
-        display:inline-block;
+
+    .question {
+        display: inline-block;
         margin: 15px;
         padding: 5px;
     }
-    .answer{
-        font-size:20px;
-        margin:15px;
+
+    .answer {
+        font-size: 20px;
+        margin: 15px;
         padding: 5px;
     }
-    #puzzle{
+
+    #puzzle {
         display: block;
         float: left;
-        margin:10px;
+        margin: 10px;
     }
 }
 

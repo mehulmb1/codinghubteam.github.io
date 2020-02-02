@@ -13,6 +13,7 @@
     <link href="static/css/faq.css" rel="stylesheet">
     <script src="static/js/faq.js"></script>
 </head>
+
 <body>
     <input type="checkbox" id="nav" class="hidden">
     <label for="nav" class="nav-btn">
@@ -39,7 +40,7 @@
                     <div class="big-menu">
                         <div class="left">
                             <a href="/">
-                                <img src="static/images/home.png" class="home">
+                                <img src="static/images/home.svg" class="home">
                             </a>
                             <a href="/events.html">
                                 <li class="link two">Events</li>
@@ -52,94 +53,117 @@
                             </a>
                         </div>
                     </div>
-                </nav>
-                <div class="main">
-                    <div class="heading">FAQ's</div>
-                    <div id="myBtnContainer">
-                        <button class="btn active shadow" onclick="filterSelection('cc')"> CrossCode</button>
-                        <button class="btn shadow" onclick="filterSelection('cb')"> CodeBusters</button>
-                        <button class="btn shadow" onclick="filterSelection('yw')"> YouOnWeb</button>
-                    </div>
+            </nav>
+            <div class="main">
+                <div class="heading">FAQ's</div>
+                <div id="myBtnContainer">
+                    <button class="btn active shadow" onclick="filterSelection('cc')"> CrossCode</button>
+                    <button class="btn shadow" onclick="filterSelection('cb')"> CodeBusters</button>
+                    <button class="btn shadow" onclick="filterSelection('yw')"> YouOnWeb</button>
+                </div>
 
-                    <div class="column">
-                        <div class="row cc">
-                          <div class="content">
+                <div class="column">
+                    <div class="row cc">
+                        <div class="content">
                             <h3 class="question">1. In Word Puzzle,how many keywords we have to find?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> Number of keywords will be around 15-20.All the participants will have same number of keywords.</h4>
-                            
+                            <h4 class="answer"><span class="Ans">Ans.</span> Number of keywords will be around 15-20.All
+                                the participants will have same number of keywords.</h4>
+
                             <h3 class="question">2. What will be the format of the word puzzle?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> Word Puzzle will 15 X 15. Keywords will be provided beside the puzzle. Example:<img id="puzzle" src="static/images/puzzle.png" alt="puzzle">
+                            <h4 class="answer"><span class="Ans">Ans.</span> Word Puzzle will 15 X 15. Keywords will be
+                                provided beside the puzzle. Example:<img id="puzzle" src="static/images/puzzle.png"
+                                    alt="puzzle">
                             </h4>
-                            
+
                             <h3 class="question">3. What orientations will be for words in puzzle?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span>The words can be vertically,horizontally,diagonally oriented and can be in reverse order.So watch Carefully.</h4>
-                            
+                            <h4 class="answer"><span class="Ans">Ans.</span>The words can be
+                                vertically,horizontally,diagonally oriented and can be in reverse order.So watch
+                                Carefully.</h4>
+
                             <h3 class="question">4. Will there be Negative marking for MCQ's in KBC?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> There is no negative marking, also only single answer is correct. So give your luck a shot!</h4>
-                            
+                            <h4 class="answer"><span class="Ans">Ans.</span> There is no negative marking, also only
+                                single answer is correct. So give your luck a shot!</h4>
+
                             <h3 class="question">5. Is it language selective coding?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> There is freedom for participants to choose from Python/C/C++, whichever they're comfortable with.
+                            <h4 class="answer"><span class="Ans">Ans.</span> There is freedom for participants to choose
+                                from Python/C/C++, whichever they're comfortable with.
                                 The only goal is to get the desired output in the end.</h4>
-                            
+
                             <h3 class="question">6. What if no-one can complete the final round?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> Judges will decide on overall performance in first and second round and give the results.
-                            Judges decision will be final.
+                            <h4 class="answer"><span class="Ans">Ans.</span> Judges will decide on overall performance
+                                in first and second round and give the results.
+                                Judges decision will be final.
                             </h4>
-                          </div>
                         </div>
-                        <div class="row cb">
-                          <div class="content">
+                    </div>
+                    <div class="row cb">
+                        <div class="content">
                             <h3 class="question">1. What are the contents of record provided for jumbled code?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> The record is supposed to contain all the lines required for the
-                                code as well as some extra lines which may add error to the code.So beware while selecting
+                            <h4 class="answer"><span class="Ans">Ans.</span> The record is supposed to contain all the
+                                lines required for the
+                                code as well as some extra lines which may add error to the code.So beware while
+                                selecting
                                 the lines for source.
                             </h4>
                             <h3 class="question">2. How to get to the result?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> The question will be available as a hard copy (on a piece of paper).
-                                The participants are expected to arrange the lines in the record in their correct sequence
+                            <h4 class="answer"><span class="Ans">Ans.</span> The question will be available as a hard
+                                copy (on a piece of paper).
+                                The participants are expected to arrange the lines in the record in their correct
+                                sequence
                                 in order to achieve the desired output as per the given record.
                                 Terminal and Text editor can be used to cross check before submission.
                             </h4>
                             <h3 class="question">3. Will there be errors in the code lines?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> No. The provided lines on record will be free of syntactical, symantical or any sort of errors.</h4>
-                            
+                            <h4 class="answer"><span class="Ans">Ans.</span> No. The provided lines on record will be
+                                free of syntactical, symantical or any sort of errors.</h4>
+
                             <h3 class="question">4. What type of error we have to debug in second round?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> There will be semantics error,syntax errors and segmentation fault.</h4>
+                            <h4 class="answer"><span class="Ans">Ans.</span> There will be semantics error,syntax errors
+                                and segmentation fault.</h4>
 
                             <h3 class="question">5. Which editor will be provided for Debugging?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> Text Editor and Terminal on Ubuntu for debugging.</h4>
+                            <h4 class="answer"><span class="Ans">Ans.</span> Text Editor and Terminal on Ubuntu for
+                                debugging.</h4>
 
                             <h3 class="question">6. Can we change the problem statement in Code Relay?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span>No. You can select the first problem statement, then the next two will be provided to you and cannot be changed. </h4>
+                            <h4 class="answer"><span class="Ans">Ans.</span>No. You can select the first problem
+                                statement, then the next two will be provided to you and cannot be changed. </h4>
 
                             <h3 class="question">7. What if no-one can complete the final round?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> Judges will decide on overall performance in first and second round and give the results.
-                            Judges decision will be final.
+                            <h4 class="answer"><span class="Ans">Ans.</span> Judges will decide on overall performance
+                                in first and second round and give the results.
+                                Judges decision will be final.
                             </h4>
-                          </div>
                         </div>
-                        <div class="row yw">
-                          <div class="content">
+                    </div>
+                    <div class="row yw">
+                        <div class="content">
                             <h3 class="question">1. Can we use Bootstrap?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> No. Use of Bootstrap is prohibited, only use HTML, CSS, JS(Javascript).</h4>
-                            
+                            <h4 class="answer"><span class="Ans">Ans.</span> No. Use of Bootstrap is prohibited, only
+                                use HTML, CSS, JS(Javascript).</h4>
+
                             <h3 class="question">2. Internet will be provided or not?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> No. There is no use of internet during competition.</h4>
+                            <h4 class="answer"><span class="Ans">Ans.</span> No. There is no use of internet during
+                                competition.</h4>
 
                             <h3 class="question">3. Will images be provided?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> Yes. Image files will pe provided as per requirement.</h4>
+                            <h4 class="answer"><span class="Ans">Ans.</span> Yes. Image files will pe provided as per
+                                requirement.</h4>
 
                             <h3 class="question">4. Which editor will be provided?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> Text Editor along with Mozilla Firefox as the test browser for Ubuntu.
-                            Notepad along with Google Chrome as test browser for Windows.</h4>
+                            <h4 class="answer"><span class="Ans">Ans.</span> Text Editor along with Mozilla Firefox as
+                                the test browser for Ubuntu.
+                                Notepad along with Google Chrome as test browser for Windows.</h4>
 
                             <h3 class="question">5. Will there be Negative marking?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> There is no negative marking, also only single answer is correct. So give your luck a shot!</h4>
+                            <h4 class="answer"><span class="Ans">Ans.</span> There is no negative marking, also only
+                                single answer is correct. So give your luck a shot!</h4>
 
                             <h3 class="question">6. Criteria for qualification upto final round?</h3>
-                            <h4 class="answer"><span class="Ans">Ans.</span> Depends on the number of features designed for the solution to make it a convenient solution.</h4>
-                          </div>
+                            <h4 class="answer"><span class="Ans">Ans.</span> Depends on the number of features designed
+                                for the solution to make it a convenient solution.</h4>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -216,16 +240,16 @@
     </div>
     <script>
         filterSelection("cc");
-    // Add active class to the current button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-        });
-    }
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156197264-1"></script>
     <script>
