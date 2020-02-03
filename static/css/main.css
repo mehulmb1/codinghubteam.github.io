@@ -78,7 +78,7 @@ nav.scroll {
 .hero--nav .logo {
     overflow: hidden;
     position: relative;
-    width: 68%;
+    width: 68px;
     border-radius: 50%;
     top: -6px;
     right: -7px;
