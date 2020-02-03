@@ -3,7 +3,8 @@ a {
     color: white;
 }
 
-html, body {
+html,
+body {
 
     margin: 0 auto;
     font-family: Josefin Sans;
@@ -12,7 +13,7 @@ html, body {
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-image: linear-gradient(-180deg,#069cca,#9609a2);
+    background-image: linear-gradient(-180deg, #069cca, #9609a2);
 
 }
 
@@ -31,7 +32,7 @@ nav {
     width: 100%;
     box-sizing: border-box;
     padding: 12px 18px;
-    transition: background-color 0.4s ease-out;
+    transition: all 0.3s ease-in-out
 }
 
 nav.scroll {
@@ -60,7 +61,7 @@ nav.scroll {
 .hero--nav {
     display: grid;
     color: white;
-    grid-template-columns: 100px 234px auto;
+    grid-template-columns: 100px 260px auto;
     list-style-type: none;
     text-shadow: 0px 3px 3px black;
     font-size: 20px;
@@ -85,34 +86,36 @@ nav.scroll {
 }
 
 
-.hero--nav .link{
-  position: relative;
-  text-shadow: none;
+.hero--nav .link {
+    position: relative;
+    text-shadow: none;
 }
 
 .hero--nav .link::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background-color: rgb(66, 105, 230);
-  transform-origin: bottom right;
-  transform: scaleX(0);
-  transition: transform 0.5s ease;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(-45deg, rgb(7, 234, 182), rgb(0, 103, 225));
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
 }
 
 .hero--nav .link:hover::before {
-  transform-origin: bottom left;
-  transform: scaleX(1);
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }
 
 
 .hero--nav .one {
-    font-size: 42px;
+    font-size: 47px;
+    text-shadow: 3px 3px #00000042;
 }
+
 .hero--nav .link.two {
     font-size: 24px;
 }
@@ -182,7 +185,9 @@ li.link.five {
 
 }
 
-.main .about, .mission, .vs {
+.main .about,
+.mission,
+.vs {
     grid-auto-flow: row;
     grid-template-rows: 50%;
     background-color: rgb(0, 0, 0);
@@ -195,13 +200,16 @@ li.link.five {
     position: relative;
 
 }
-.about{
+
+.about {
     justify-self: left;
 }
-.mission{
+
+.mission {
     justify-self: right;
 }
-.vs{
+
+.vs {
     justify-self: left;
 }
 
@@ -243,7 +251,9 @@ h2.vision--heading {
     color: white;
 }
 
-img.about--img, .mission--img, .vision--img {
+img.about--img,
+.mission--img,
+.vision--img {
     position: absolute;
     width: 500px;
     height: 300px;
@@ -260,14 +270,17 @@ img.vision--img {
     height: 300px;
 
 }
-.glow{
+
+.glow {
     animation: glow 1s ease-in infinite alternate;
 }
-@keyframes glow{
-    from{
+
+@keyframes glow {
+    from {
         text-shadow: 0 0 9px #fff, 0 0 8px #fff, 0 0 10px #4CAF50, 0 0 7px #4CAF50, 0 0 8px #4CAF50, 0 0 8px #4CAF50, 0 0 6px #4CAF50;
     }
-    to{
+
+    to {
         text-shadow: 0 0 11px #fff, 0 0 9px #009688, 0 0 11px #009688, 0 0 10px #009688, 0 0 9px #009688, 0 0 14px #009688, 0 0 13px #009688;
     }
 }
@@ -300,19 +313,32 @@ img.vision--img {
 /* mobile nav */
 @media screen and (max-width: 864px) {
 
-    .main{
-    grid-auto-flow: row !important;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 3em;
-        
+    .hero--nav .one {
+        font-size: 42px;
+        position: relative;
+        top: 4px;
     }
-    .main .about, .mission, .vs{
+
+    .main {
+        grid-auto-flow: row !important;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 3em;
+
+    }
+
+    .main .about,
+    .mission,
+    .vs {
         width: auto !important;
     }
-    img.about--img, .mission--img, .vision--img {
+
+    img.about--img,
+    .mission--img,
+    .vision--img {
         display: none;
     }
+
     .hero--text {
         font-size: 50px;
         padding-left: 0;
@@ -326,6 +352,7 @@ img.vision--img {
 
     nav {
         padding: 0;
+        transition: none;
     }
 
     .laptop {

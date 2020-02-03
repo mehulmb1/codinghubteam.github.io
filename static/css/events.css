@@ -5,6 +5,9 @@
 .home {
   width: 50px;
   height: 50px;
+  filter: invert(1);
+  position: relative;
+  top: -5px;
 }
 
 .hide {
@@ -144,7 +147,7 @@ nav {
   width: 100%;
   box-sizing: border-box;
   padding: 12px 18px;
-  transition: background-color 0.4s ease-out;
+  transition: all 0.3s ease-in-out;
 }
 
 nav.scroll {
@@ -172,7 +175,7 @@ nav.scroll {
 .hero--nav {
   display: grid;
   color: white;
-  grid-template-columns: 100px 234px auto;
+  grid-template-columns: 100px 260px auto;
   list-style-type: none;
   text-shadow: 0px 3px 3px black;
   font-size: 20px;
@@ -207,7 +210,8 @@ nav.scroll {
 }
 
 .hero--nav .one {
-    font-size: 42px;
+  font-size: 47px;
+  text-shadow: 3px 3px #00000042;
 }
 
 li.link.four {
@@ -215,7 +219,7 @@ li.link.four {
   margin-top: 13px;
 }
 
-.hero--nav .link{
+.hero--nav .link {
   position: relative;
   text-shadow: none;
 }
@@ -228,7 +232,7 @@ li.link.four {
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background-color: rgb(66, 105, 230);
+  background-image: linear-gradient(-45deg, rgb(7, 234, 182), rgb(0, 103, 225));
   transform-origin: bottom right;
   transform: scaleX(0);
   transition: transform 0.5s ease;
@@ -270,6 +274,13 @@ li.link.four {
 }
 
 @media screen and (max-width: 864px) {
+  .hero--nav .one {
+    font-size: 42px;
+    text-shadow: 3px 3px #00000042;
+    position: relative;
+    top: 4px;
+  }
+
   .hero--text {
     font-size: 50px;
     padding-left: 0;
@@ -287,6 +298,7 @@ li.link.four {
 
   nav {
     padding: 0;
+    transition: none;
   }
 
   .laptop {
