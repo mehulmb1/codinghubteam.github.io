@@ -10,20 +10,21 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="static/css/exam.css" rel="stylesheet">
     <script>
-        function checkpassword() {
-            var password = document.getElementById("password");
-            if (password.value != "iamcoder") {
-                alert("You entered wrong password");
-                password.value = "";
-                password.focus();
-            } else {
-                var winFeature =
-                    'location=no,toolbar=no,menubar=no,titlebar=no,scrollbars=yes,fullscreen=yes,resizable=no';
+        function startgame() {
+                var winFeature ='location=no,toolbar=no,menubar=no,titlebar=no,scrollbars=yes,fullscreen=yes,resizable=no';
                 window.open('startpage.html', '_blank', winFeature);
-            }
+        }
+        function startkbc(){
+
+        }
+        function startrelay(){
+
+        }
+        function startans(){
+            
         }
     </script>
-    <script type="text/javascript" src="static/js/events.js"></script>
+    <script type="text/javascript" src="static/js/exam.js"></script>
     <style type="text/css">
         .exams {
             display: grid;
@@ -124,77 +125,136 @@
 
 
                 <div id="myBtnContainer">
-                    <button class="btn active shadow" onclick="filterSelection('cc')"> CrossCode</button>
-                    <button class="btn shadow" onclick="filterSelection('cb')"> CodeBusters</button>
-                    <button class="btn shadow" onclick="filterSelection('yw')"> YouOnWeb</button>
+                    <ul class="list">
+                        <li>CrossCode
+                            <ul class="sublist">
+                                <button class="btn shadow" onclick="filterSelection('cc1')">Word Puzzle</button>
+                                <button class="btn shadow" onclick="filterSelection('cc2')">KBC</button>
+                                <button class="btn shadow" onclick="filterSelection('cc3')">Design Pattern</button>
+                            </ul>
+                        </li>
+                        <li>CodeBusters
+                            <ul class="sublist">
+                                <button class="btn shadow" onclick="filterSelection('cb1')">Jumbled Code</button>
+                                <button class="btn shadow" onclick="filterSelection('cb2')">Debugging</button>
+                                <button class="btn shadow" onclick="filterSelection('cb3')">Code-Relay</button>
+                            </ul>
+                        </li>
+                        <li>YouOnWeb
+                            <ul class="sublist">
+                                <button class="btn shadow" onclick="filterSelection('yw1')">Round 1</button>
+                                <button class="btn shadow" onclick="filterSelection('yw2')">Round 2</button>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-
-                <h1 class="soon">Coming Soon on 6th feb</h1>
-                <div>
-                    <label for='password'>Enter password for playing sample wordpuzzle :
-                        <input type='password' name='Password' id='password' placeholder="Password" required>
-                    </label>
-                    <div class="buttonline" style="height:56px;margin-top:20px;">
-                        <div class="buttonbox" style="height:56px;width:320px;margin: 0 auto;">
-                            <input type="button" id="Start" value="Start Game" onclick="checkpassword()">
-                        </div>
+        <section class="instruction">
+            <h1 class="rules soon hide">
+                Select the game for which you have registered.
+            </h1>
+            <div class="rules cc1 hide">
+                    <h2>Round 1:WordPuzzle Instructions</h2>
+                <ul>
+                    <li><b><i>You have to be registered, using your Email-ID to play the game.</i></b></li>
+                    <li>You will be given a 20 X 20 matrix.</li>
+                    <li>Words are arranged vertically,horizontally,diagonally and also in reverse order.</li>
+                    <li>You have to find the words in matrix which have been mentioned in box beside it.</li>
+                    <li>You have to click on first letter of word then drag, until the last letter to select it.</li>
+                    <li>You can also drag in reverse order(from last letter to first) to select it.</li>
+                    <li>Once a word is found then it gets strike-through in the box.</li>
+                    <li>There will be 10 minutes. Timer will start once you click start game.</li>
+                    <li>Find all words as soon as possible.</li>
+                    <li>Assessment will be based on time and no. of words found.</li>
+                    <li><b>Important :</b>Guess word in puzzle have 5 bonus points if found.</li>
+                    <li>You must mark it on puzzle before the last-word and before timer runs out,for bonus points.</li>
+                </ul>
+                <div class="buttonline" style="height:56px;margin-top:20px;">
+                    <div class="buttonbox" style="height:56px;width:320px;margin: 0 auto;">
+                        <input type="button" id="Start" value="Start Game" onclick="startgame()">
                     </div>
                 </div>
-                <!--
-        <section class="instruction">
-            <div class="rules cc hide">
-                <h2>CrossCode Instructions</h2>
+            </div>
+            <div class="rules cc2 hide">
+                <h2>Round 2:KBC</h2>
                 <ul>
-                    <li>1. lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
-                    <li>lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
-                    <li>lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
-                    <li>lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
-                    <li>lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
+                    <li>This will consist of questions based on C++,Python.</li>
+                    <li>You will have 30 min to answer all questions.</li>
+                    <li>Multiple Choice Questions with single correct answer.</li>
+                    <li>No, negative marking, so give it your shot.</li>
                 </ul>
-                <div class="rounds">
-                    <button class="btn round">Round 1</button>
-                    <button class="btn round disabled" disabled>Round 2</button>
+                <div class="buttonline" style="height:56px;margin-top:20px;">
+                    <div class="buttonbox" style="height:56px;width:320px;margin: 0 auto;">
+                        <input type="button" id="Start" value="Start KBC" onclick="startkbc()">
+                    </div>
                 </div>
             </div>
-
-            <div class="rules cb hide">
-                <h2>CrossBuster Instructions</h2>
+            <div class="rules cc3 hide">
+                <h2>Round 3:Design Pattern</h2>
                 <ul>
-                    <li>lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
-                    <li>lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
-                    <li>lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
-                    <li>lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
-                    <li>lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero lorem ipsum dolero</li>
+                    <li>This will be offline round.</li>
+                    <li>Instructions will be provided prior to starting the round.</li>
                 </ul>
-                <div class="rounds">
-                    <button class="btn round">Round 1</button>
-                    <button class="btn round disabled" disabled>Round 2</button>
+            </div>
+            <div class="rules cb1 hide">
+                <h2>Round 1:Jumbled Code</h2>
+                <ul>
+                    <li>You have to rearrange the jumbled code.</li>
+                    <li>This will be offline round.</li>
+                    <li>Further Instructions will be provided prior to starting the round.</li>
+                </ul>
+            </div>
+            <div class="rules cb2 hide">
+                <h2>Round 2:Debugging</h2>
+                <ul>
+                    <li>You have to debug the code containing errors and make it error free.</li>
+                    <li>This will be offline round.</li>
+                    <li>Instructions will be provided prior to starting the round.</li>
+                </ul>
+            </div>
+            <div class="rules cb3 hide">
+                <h2>Round 3:CodeRelay Instructions</h2>
+                <ul>
+                    <li>You will be given 5 problem statements to solve.</li>
+                    <li>Each new problem statement will be given on solving the previous problem statement.</li>
+                    <li>There will be one Golden Egg question.</li>
+                    <li>Participant who can solve this question do not need to solve the others.</li>
+                    <li>If anyone solves the goldenegg question in given time limit, then he /she will be directly declared as 
+                        Winner.
+                    </li>
+                    <li>If no-one choose to solve the Golden Egg question,then the participant who solves most of the questions<br> among the given 5 problem statement will be declared as Winner.</li>
+                </ul>
+                <div class="buttonline" style="height:56px;margin-top:20px;">
+                    <div class="buttonbox" style="height:56px;width:320px;margin: 0 auto;">
+                        <input type="button" id="Start" value="Start Relay" onclick="startrelay()">
+                    </div>
                 </div>
             </div>
-
-            <div class="rules yw hide">
-                <h2>YouOnWeb Instructions</h2>
+            <div class="rules yw1 hide">
+                <h2>YouOnWeb:Round1 Instructions</h2>
                 <ul>
-                    <li>Round 1, Will consist of questions from HTML,CSS,JS</li>
-                    <li>You will have 30 min to Complete Round 1.</li>
+                    <li>This will consist of questions from HTML,CSS,JS</li>
+                    <li>You will have 30 min to answer all questions.</li>
                     <li>Type of Questions will be MCQ with single correct answer.</li>
                     <li>Top x Players will be selected based on their scores.</li>
                 </ul>
+                <div class="buttonline" style="height:56px;margin-top:20px;">
+                    <div class="buttonbox" style="height:56px;width:320px;margin: 0 auto;">
+                        <input type="button" id="Start" value="Start OnWeb" onclick="startans()">
+                    </div>
+                </div>
+            </div>
+            <div class="rules yw2 hide">
+                <h2>YouOnWeb:Round2 Instructions</h2>
                 <ul>
-                    <li>Round 2, Will be Design Challenge</li>
+                    <li>This will be Design Challenge</li>
                     <li>You Have To Design a Webpage Based on a given theme</li>
                     <li>Winner will be selected based on their design, responsiveness, Features.</li>
                 </ul>
-                <div class="rounds">
-                    <button class="btn round">Round 1</button>
-                </div>
             </div>
         </section>
-
         </div>
         </div>
         </div>
-    -->
                 <!--hero container end-->
 
                 <!--footer container starts-->
@@ -277,7 +337,7 @@
                             this.className += " active";
                         });
                     }
-                    filterSelection("cc");
+                    filterSelection("soon");
                 </script>
 </body>
 

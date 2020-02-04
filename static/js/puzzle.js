@@ -23,7 +23,7 @@ function sendData(sec){
 
 	$(".final").append("<form id='testform' role='form'><label for='team' id='lteam'>Team No. :<input type='text' name='Team' class='Data' id='team' readonly='readonly' value="+ Data["Team"]
 	+"></label><input type='text' name='Name' class='Data' id='name' readonly='readonly' value="+ Data["Name"]
-	+"></label><input type='text' name='Email' class='Data' id='email' readonly='readonly' value="+ Data["Email"]
+	+"><input type='text' name='Email' class='Data' id='email' readonly='readonly' value="+ Data["Email"]
 	+"><label for='time' id='ltime'>Time taken(in secs) :<input type='text' name='Time' class='Data' id='time' readonly='readonly' value="+ Data["Time"]
 	+"></label><label for='scored' id='lscore'>Your Score :<input type='text' name='Score' class='Data' id='scored' readonly='readonly' value="+ Data["Score"]
 	+"></label><label for='bonus' id='lbonus'>Got Bonus :<input type='text' name='Bonus' class='Data' id='scored' readonly='readonly' value="+ Data["Bonus"]
@@ -655,7 +655,7 @@ $(document).ready(function() {
 						var sec=parseInt(document.getElementById("second").innerHTML);
 						/*console.log(min);
 						console.log(sec);*/
-						sec = 600 - (min*60 + sec);
+						sec = 900 - (min*60 + sec);
 						sendData(sec)
 						//console.log(sec);
 						min = Math.floor(sec / 60);

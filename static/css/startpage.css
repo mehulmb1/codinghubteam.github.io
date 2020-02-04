@@ -87,27 +87,27 @@ nav.scroll {
     margin-bottom: 0px;
     text-align: center;
 }
-.instruct{
-    display: grid;
-    grid-template-columns:1000px auto;
-}
-.inst{
-    font-size:1.5em;
-    text-align:left;
-    width:100%;
-    margin-top:0px;
-    padding-left:50px;
-    line-height:30px;
+.details{
+    display:block;
+    margin:auto auto;
+    width:640px;
 }
 /*main*/
 
-.right{
-    display:block;
-    padding-top:100px;
+h2{
+    font-size:20px;
+    text-align:center;
 }
 
 .line,.buttonline{
-    width: 320px;
+    width:640px;
+}
+.line1{
+    width:600px;
+    margin-left:160px;
+    display: grid;
+    grid-template-columns: 320px auto;
+    grid-gap:2px;        
 }
 
 .box {
@@ -162,20 +162,23 @@ input[type="email"]:valid{
     background-color: white;
 }
 
-input[type="email"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
-      max-height: 200px;
-      padding:10px 30px 10px 50px;
-      width:240px;
-}
-
-.requirements {
+#req{
     background-image: linear-gradient(white,white);
-    border-radius:40px;
-    width:200px;
-    color: #999;
-    max-height: 0;
-    transition: 0.25s;
-    overflow: hidden;
+    width: 280px;
     color: red;
     font-style: italic;
+    align-content: center;
+    display: grid;
+    text-align: center;
+    border-radius: 10px;
+    height:auto;
+    overflow: hidden;
+}
+
+.hide{
+    max-height: 0;
+}
+
+.show{
+    max-height:48px;
 }
