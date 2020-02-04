@@ -23,7 +23,7 @@ function sendData(sec){
 
 	$(".final").append("<form id='testform' role='form'><label for='team' id='lteam'>Team No. :<input type='text' name='Team' class='Data' id='team' readonly='readonly' value="+ Data["Team"]
 	+"></label><input type='text' name='Name' class='Data' id='name' readonly='readonly' value="+ Data["Name"]
-	+"></label><input type='text' name='Email' class='Data' id='email' readonly='readonly' value="+ Data["Email"]
+	+"><input type='text' name='Email' class='Data' id='email' readonly='readonly' value="+ Data["Email"]
 	+"><label for='time' id='ltime'>Time taken(in secs) :<input type='text' name='Time' class='Data' id='time' readonly='readonly' value="+ Data["Time"]
 	+"></label><label for='scored' id='lscore'>Your Score :<input type='text' name='Score' class='Data' id='scored' readonly='readonly' value="+ Data["Score"]
 	+"></label><label for='bonus' id='lbonus'>Got Bonus :<input type='text' name='Bonus' class='Data' id='scored' readonly='readonly' value="+ Data["Bonus"]
@@ -64,7 +64,7 @@ function sendData(sec){
   // Set the date we're counting down to
 var countDown = new Date().getTime();
   //console.log(countDown);
-countDown+=((1000*60)*10+2000);		//1000*60 = 1 min.
+countDown+=((1000*60)*15+2000);		//1000*60 = 1 min.
 // Update the count down every 1 second;
   var x = setInterval(function() {
     // Get today's date and time
@@ -88,7 +88,7 @@ countDown+=((1000*60)*10+2000);		//1000*60 = 1 min.
           document.getElementById("minute").innerHTML ='0' ;  
           document.getElementById("second").innerHTML = '0';
 		  timeup()
-		  sendData(600);
+		  sendData(900);
           $(".result").append("<br><span id='mintime'>Time required: 10 minutes.</span>");
     } 
 },750);
@@ -114,7 +114,7 @@ var allwords = ["INHERITANCE","POLYMORPHISM","ENCAPSULATION","ABSTRACTION","VIRT
 				"YIELD","RAISE","LAMBDA","IDENTIFIER","LITERAL","FLOAT","PRINT","INPUT","TUPLE",
 				"DICTIONARY","DATATYPE","UPDATE","STRING","REPLACE","SPLIT","STRIP","LIST","METHOD",
 				"FLOOR","RANDOM","DATAMEMBER","INSTANCE","CONSTRUCTOR","EXCEPTION","DESTRUCTOR",
-				"IMPLICIT","BINDING","IOSTREAM","VECTOR","QUEUE","DEQUE","FSTREAM","MUTABLE","EXPORT",
+				"IMPLICIT","BINDING","IOSTREAM","DEQUE","FSTREAM","MUTABLE","EXPORT",
 				"EXTERN","REGISTER","POINTER","ITERATOR","MULTISET","MULTIMAP","REMOVE","GETLINE","RUNTIME",
 				"COMPILER","DYNAMIC"];
 var words_list=["CODINGHUB"];
@@ -655,7 +655,7 @@ $(document).ready(function() {
 						var sec=parseInt(document.getElementById("second").innerHTML);
 						/*console.log(min);
 						console.log(sec);*/
-						sec = 600 - (min*60 + sec);
+						sec = 900 - (min*60 + sec);
 						sendData(sec)
 						//console.log(sec);
 						min = Math.floor(sec / 60);

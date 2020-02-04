@@ -11,7 +11,7 @@ html,body{
 .main {
 	display: grid;
 	grid-template-columns:700px auto;
-	margin: 5px auto;
+	margin:25px auto;
 	padding-left:4em;
 }
 
@@ -164,7 +164,7 @@ h1{
 	-webkit-background-clip:text;
 	-webkit-text-fill-color:transparent;
 	transform-origin: bottom center;
-	padding-top:240px;
+	padding-top:340px;
     font-size:75px;
     animation: congratulation 1s linear 1;
     position: absolute;
@@ -292,7 +292,7 @@ label{
 #lscore{
 	position:absolute;
 	padding-top: 270px;
-    padding-left: 955px;
+    padding-left:950px;
 }
 
 #lbonus{
@@ -347,7 +347,7 @@ label{
 }
 
 #submit{
-	margin-top:400px;
+	margin-top:500px;
 	margin-left:520px;
 	box-sizing: border-box;
 	height: 56px;
