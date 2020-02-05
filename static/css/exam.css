@@ -211,11 +211,13 @@ ul.list li{
     border-bottom:3px solid #185706;
     border-right: 3px solid #185706;
     border-radius:50px;
+    position: relative;
 }
 
 ul.sublist{
     position:absolute;
     display:none;
+    top: 
 }
 ul.sublist button{
     font-size:20px;
@@ -227,6 +229,8 @@ ul.sublist button{
 }
 .list li:hover .sublist{
     display:block;
+    left:-38px;
+    top: 43px;
 }
 
 ul.sublist button:hover{
