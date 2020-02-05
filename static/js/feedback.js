@@ -2,6 +2,7 @@ $(document).ready(function(){
     $('#submit').on('click', function(e) {
         e.preventDefault();
         console.log("Entered sending process");
+        document.getElementById('submit').disabled='disabled';
         // Get the form instance
         var $form = $('#testform');
         
