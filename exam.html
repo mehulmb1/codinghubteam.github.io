@@ -11,8 +11,15 @@
     <link href="static/css/exam.css" rel="stylesheet">
     <script>
         function startgame() {
+                var password = document.getElementById("password");
+                if (password.value != "iamcoder") {
+                    alert("You entered wrong password");
+                    password.value = "";
+                    password.focus();
+                } else {
                 var winFeature ='location=no,toolbar=no,menubar=no,titlebar=no,scrollbars=yes,fullscreen=yes,resizable=no';
                 window.open('startpage.html', '_blank', winFeature);
+                }
         }
         function startkbc(){
 
@@ -168,6 +175,11 @@
                     <li><b>Important :</b>Guess word in puzzle have 5 bonus points if found.</li>
                     <li>You must mark it on puzzle before the last-word and before timer runs out,for bonus points.</li>
                 </ul>
+                <div>
+                    <label for='password'>Enter password for playing sample wordpuzzle :
+                        <input type='password' name='Password' id='password' placeholder="Password" required>
+                    </label>
+                </div>
                 <div class="buttonline" style="height:56px;margin-top:20px;">
                     <div class="buttonbox" style="height:56px;width:320px;margin: 0 auto;">
                         <input type="button" id="Start" value="Start Game" onclick="startgame()">
