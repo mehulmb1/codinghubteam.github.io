@@ -11,24 +11,32 @@
     <link href="static/css/exam.css" rel="stylesheet">
     <script>
         function startgame() {
-                var password = document.getElementById("password");
+                /*var password = document.getElementById("password");
                 if (password.value != "iamcoder") {
                     alert("You entered wrong password");
                     password.value = "";
                     password.focus();
-                } else {
+                } else {*/
                 var winFeature ='location=no,toolbar=no,menubar=no,titlebar=no,scrollbars=yes,fullscreen=yes,resizable=no';
                 window.open('startpage.html', '_blank', winFeature);
-                }
+                //}
         }
         function startkbc(){
-
+            /*var winFeature ='location=no,toolbar=no,menubar=no,titlebar=no,scrollbars=yes,fullscreen=yes,resizable=no';
+            window.open('http://172.25.28.194:8000', '_blank', winFeature);*/
         }
         function startrelay(){
-
+            /*var winFeature ='location=no,toolbar=no,menubar=no,titlebar=no,scrollbars=yes,fullscreen=yes,resizable=no';
+            window.open('', '_blank', winFeature)''
+            */
         }
         function startans(){
-            
+            var winFeature ='location=no,toolbar=no,menubar=no,titlebar=no,scrollbars=yes,fullscreen=yes,resizable=no';
+            window.open('http://172.25.28.194:8000', '_blank', winFeature);
+        }
+        function startdebug(){
+            var winFeature ='location=no,toolbar=no,menubar=no,titlebar=no,scrollbars=yes,fullscreen=yes,resizable=no';
+            window.open('https://www.hackerrank.com/ch-debugging', '_blank', winFeature);
         }
     </script>
     <script type="text/javascript" src="static/js/exam.js"></script>
@@ -171,17 +179,19 @@
                     <li>You have to click on first letter of word then drag, until the last letter to select it.</li>
                     <li>You can also drag in reverse order(from last letter to first) to select it.</li>
                     <li>Once a word is found then it gets strike-through in the box.</li>
-                    <li>There will be 10 minutes. Timer will start once you click start game.</li>
+                    <li>There will be 15 minutes. Timer will start once you click start game.</li>
                     <li>Find all words as soon as possible.</li>
                     <li>Assessment will be based on time and no. of words found.</li>
                     <li><b>Important :</b>Guess word in puzzle have 5 bonus points if found.</li>
                     <li>You must mark it on puzzle before the last-word and before timer runs out,for bonus points.</li>
                 </ul>
+            <!--
                 <div>
                     <label for='password'>Enter password for playing sample wordpuzzle :
                         <input type='password' name='Password' id='password' placeholder="Password" required>
                     </label>
                 </div>
+            -->
                 <div class="buttonline" style="height:56px;margin-top:20px;">
                     <div class="buttonbox" style="height:56px;width:320px;margin: 0 auto;">
                         <input type="button" id="Start" value="Start Game" onclick="startgame()">
@@ -221,9 +231,14 @@
                 <h2>Round 2:Debugging</h2>
                 <ul>
                     <li>You have to debug the code containing errors and make it error free.</li>
-                    <li>This will be offline round.</li>
-                    <li>Instructions will be provided prior to starting the round.</li>
+                    <li>You will be directed to hackerrank for this round.</li>
+                    <li>Instructions will be provided on the site.</li>
                 </ul>
+                <div class="buttonline" style="height:56px;margin-top:20px;">
+                    <div class="buttonbox" style="height:56px;width:320px;margin: 0 auto;">
+                        <input type="button" id="Start" value="Start Debugging" onclick="startdebug()">
+                    </div>
+                </div>
             </div>
             <div class="rules cb3 hide">
                 <h2>Round 3:CodeRelay Instructions</h2>
@@ -249,7 +264,7 @@
                     <li>This will consist of questions from HTML,CSS,JS</li>
                     <li>You will have 30 min to answer all questions.</li>
                     <li>Type of Questions will be MCQ with single correct answer.</li>
-                    <li>Top x Players will be selected based on their scores.</li>
+                    <li>Top 15 Players will be selected based on their scores.</li>
                 </ul>
                 <div class="buttonline" style="height:56px;margin-top:20px;">
                     <div class="buttonbox" style="height:56px;width:320px;margin: 0 auto;">
