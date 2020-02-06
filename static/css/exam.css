@@ -230,7 +230,7 @@ ul.sublist button{
 .list li:hover .sublist{
     display:block;
     left:-38px;
-    top: 43px;
+    top: 38px;
 }
 
 ul.sublist button:hover{
