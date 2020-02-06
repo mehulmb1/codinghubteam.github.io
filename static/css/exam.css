@@ -217,9 +217,9 @@ ul.list li{
 ul.sublist{
     position:absolute;
     display:none;
-    top: 
 }
 ul.sublist button{
+    width:160px;
     font-size:20px;
     display:block;
     border-bottom:3px solid #1c0080;
