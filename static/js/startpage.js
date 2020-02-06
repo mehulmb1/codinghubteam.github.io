@@ -34,8 +34,9 @@ var allmails=["master@gmail.com","hacker@gmail.com","coder@gmail.com","tracker@g
               "vaidehi5lehekar@gmail.com","reshmakuchekar16@gmail.com","omkarnagarkar53@gmail.com","sarthakshivgan31@gmail.com",
               "jainmeet053@gmail.com","anshula.awasthi10@gmail.com","rajatgade1@gmail.com","akulgod@gmail.com",
               "shraddhapansare16@gmail.com","sanketsuryawanshi1571@gmail.com","abhishek.chilekar@gmail.com","aditya.dorekar@gmail.com",
-              "sourabhmahale98@gmail.com","samruddhitamboli@gmail.com","sorgamsunil10@gmail.com","vedantshirude7@gmail.com"
-              ]
+              "sourabhmahale98@gmail.com","samruddhitamboli@gmail.com","sorgamsunil10@gmail.com","vedantshirude7@gmail.com",
+              "pranalkar28@gmail.com"
+            ]
 
 
 function validate(){
