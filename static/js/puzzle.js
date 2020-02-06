@@ -32,7 +32,7 @@ function sendData(sec){
 
 	$('#submit').on('click', function(e) {
 	e.preventDefault();
-	document.getElementById('submit').disabled='disabled';
+	//document.getElementById('submit').disabled='disabled';
 	// Get the form instance
 	var $form = $('#testform');
 
