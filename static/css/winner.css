@@ -13,7 +13,6 @@ html,body {
     scroll-behavior: smooth;
     /*border-top: 2px solid rgb(103, 58, 183);*/
     /*border-left: 2px solid rgb(103, 58, 183);*/
-    background-image: url(../images/trophy.png);
     background-position: center;
     background-repeat: no-repeat;
 }
