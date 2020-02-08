@@ -118,6 +118,7 @@ ol.names li {font-size: xx-large;}
             border-radius: 3px;
             margin: 8px;
             box-shadow: 2px 4px 2px 0px #08090954;
+            padding: 8px;
         }
         ol li {
             color: rgb(138, 43, 226);
@@ -128,3 +129,6 @@ ol.names li {font-size: xx-large;}
         text-align: center;
         font-size: 30px;
     }
+.names{
+    padding-left: 0;
+}
