@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" type="image/png" href="static/images/hub.jpg">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <link href="static/css/winner.css" rel="stylesheet">
+    <script src="static/js/confetti.js"></script>
     <style type="text/css">
         .exams {
             display: grid;
@@ -89,11 +90,20 @@
             border-radius: 30px;
             transition: 200ms ease 0s;
         }
+        #confetti{
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+        }
+
     </style>
 </head>
 
 <body>
     <!--hero container-->
+    <canvas id="confetti" width="1" height="1"></canvas>
     <div class="hero">
         <div class="hero--container">
             <nav>
@@ -104,36 +114,39 @@
                 </div>
             </nav>
             <div class="main">
-                <div class="hero--heading">
+                <!-- <div class="hero--heading">
                     <h1 class="hero--text">Techtonic 2020</h1>
                     <span class="tagline">Powered By Coding Hub</span>
-                </div>
-                <h1>Winners</h1>
+                </div> -->
+                <h1 class="winner">Winners</h1>
         <div class="instruction">
-            <div>
+            <div class="card">
                 <h1>CrossCode</h1>
-                <ol>
-                    <li>Hrutik Doshi</li>
-                    <li>Samruddhi Tamboli</li>
+                <ol class="names">
+                    <li class="winner">Winner: Hrutik Doshi</li>
+                    <li class="runner">Runner up: Samruddhi Tamboli</li>
                 </ol>
             </div>
-            <div>
+            <div class="card">
                 <h1>CodeBusters</h1>
-                <ol>
-                    <li>Hrutik Doshi</li>
-                    <li>Aditya Bhairawkar</li>
+                <ol class="names">
+                    <li class="winner">winner: Hrutik Doshi</li>
+                    <li class="runner">Runner up: Aditya Bhairawkar</li>
                 </ol>
             </div>
-            <div>
+            <div class="card">
                 <h1>YouOnWeb</h1>
-                <ol>
-                    <li>Darshan Pawar</li>
-                    <li>Narendra Dwivedi</li>
+                <ol class="names">
+                    <li class="winner">winner: Darshan Pawar</li>
+                    <li class="runner">Runner up: Narendra Dwivedi</li>
                 </ol>
             </div>
-        </section>
+
         </div>
         </div>
+        <div class="message">
+            <p>Congratulation, to all winners and Runner ups</p>
+            <p>Happy coding!!</p>
         </div>
                 <!--hero container end-->
 
