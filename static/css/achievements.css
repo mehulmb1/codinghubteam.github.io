@@ -1,6 +1,8 @@
 a {
     text-decoration: none;
     color: white;
+    z-index:10;
+    cursor: pointer;
 }
 
 html,body {
@@ -45,7 +47,7 @@ header{
 }
 
 #nav:checked~.nav-wrapper {
-  z-index:2;
+  z-index:10;
   opacity: 1;
 }
 
@@ -252,6 +254,7 @@ hr{
     #navbar .one {
     font-size: 40px;
     }
+
     #navbar .logo {
     width: 60px;
     height: 60px;
@@ -373,5 +376,11 @@ hr{
     }
     .project>h2{
         font-size:25px;
+    }
+    canvas{
+        z-index:5;
+    }
+    .footer--container{
+        z-index:10;
     }
 }
