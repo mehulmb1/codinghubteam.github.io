@@ -57,7 +57,6 @@ nav.scroll {
 .slides{
     display:none;
     overflow: hidden;
-    opacity:.8;
 }
 
 .slideshow{
@@ -65,6 +64,7 @@ nav.scroll {
     overflow: hidden;
     margin: auto;
     width:100%;
+    height:100vh;
 }
 
 .prev, .next {
