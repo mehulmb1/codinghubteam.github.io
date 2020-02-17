@@ -20,6 +20,7 @@ header{
     width:100%;
     background-color:orangered;
     height:80px;
+    z-index:10;
 }
 
 #nav:checked+.nav-btn {
@@ -82,6 +83,7 @@ header{
     font-size: 20px;
     align-items: center;
     padding: 10px;
+    z-index:10;
 }
   
 #navbar .left {
@@ -91,6 +93,7 @@ grid-template-columns: auto;
 grid-gap: 59px;
 justify-content: end;
 /*! padding:0px 50px; */
+z-index:10;
 }
 
 #navbar .logo {
@@ -152,6 +155,9 @@ transform: scaleX(1);
     width: 100%;
 }
 
+canvas{
+    z-index:5;
+}
 .main>h1{
     font-size:55px;
     color:green;
@@ -217,6 +223,7 @@ hr{
   margin-top:2em;
   width: 100%;
   bottom:0;
+  z-index:10;
 }
 
 .social {
