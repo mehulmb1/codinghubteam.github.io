@@ -13,8 +13,6 @@ body {
     box-sizing: border-box;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    background-image: linear-gradient(-180deg, #069cca, #9609a2);
-
 }
 
 .header__background {
@@ -32,13 +30,13 @@ nav {
     width: 100%;
     box-sizing: border-box;
     padding: 12px 18px;
-    transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out;
 }
 
 nav.scroll {
+    background-color:orangered;
     top: 0em;
     height: 5em;
-    background-image: linear-gradient(90deg, rgb(129, 200, 129), rgb(123, 135, 219));
     color: #eef;
     z-index: 10;
 }
@@ -48,7 +46,6 @@ nav.scroll {
 }
 
 .hero--container {
-    background-image: linear-gradient(65deg, rgba(26, 32, 218, 0.55), rgba(85, 208, 45, 0.71)), url(https://res.cloudinary.com/codinghub/images/hero_z4ovci.png);
     background-position-x: center;
     display: grid;
     color: rgb(255, 255, 255);
@@ -57,6 +54,94 @@ nav.scroll {
     width: 107vw;
     background-attachment: fixed;
 }
+.slides{
+    display:none;
+    overflow: hidden;
+    opacity:.8;
+}
+
+.slideshow{
+    position: absolute;
+    overflow: hidden;
+    margin: auto;
+    width:100%;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index:10;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .dot-container{
+      position: absolute;
+      text-align:center;
+      width: 100%;
+      z-index:10;
+      top:92%;
+      height:20px;
+  }
+  .dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    border-color:1px solid black;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active{
+    background-color: #fff;
+    height:15px;
+    width:15px;
+  }
+
+  .dot:hover {
+    background-color: #fff;
+  }
+  /* Fading animation 
+  .fade {
+    -webkit-animation-name:fade;
+    -webkit-animation-duration:1.5s;
+    animation-name: fade;
+    animation-duration:1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  */
+  @media only screen and (max-width: 300px) {
+    .prev, .next{font-size: 11px}
+  }
 
 .hero--nav {
     display: grid;
@@ -72,7 +157,7 @@ nav.scroll {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: auto;
-    grid-gap: 59px;
+    grid-gap:40px;
     justify-content: end;
 }
 
@@ -88,6 +173,8 @@ nav.scroll {
 
 .hero--nav .link {
     position: relative;
+    font-weight:300;
+    font-size: 24px;
     text-shadow: none;
 }
 
@@ -116,22 +203,6 @@ nav.scroll {
     text-shadow: 3px 3px #00000042;
 }
 
-.hero--nav .link.two {
-    font-size: 24px;
-}
-
-.hero--nav .link.three {
-    font-size: 24px;
-}
-
-li.link.four {
-    font-size: 24px;
-}
-
-li.link.five {
-    font-size: 24px;
-}
-
 .hero--text {
     font-size: 4em;
     /*padding: 2em;*/
@@ -142,7 +213,7 @@ li.link.five {
     align-self: center;
     font-weight: 100;
     position: relative;
-    top: 9%;
+    top:30%;
     text-align: center;
 }
 
@@ -151,25 +222,6 @@ li.link.five {
     display: block;
     margin-top: 19px;
     font-size: 50px;
-}
-
-.arrow--down {
-    text-align: center;
-    animation: up 2s ease-in infinite;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    justify-content: center;
-}
-
-@keyframes up {
-    50% {
-        transform: translatey(-10px);
-    }
-
-    100% {
-        transform: translatey(0px);
-    }
 }
 
 /*main */
@@ -287,7 +339,7 @@ img.vision--img {
 
 /*footer*/
 .footer--container {
-    background-image: linear-gradient(40deg, #CCFFFF, #ffcccc);
+    background-image: linear-gradient(180deg,#f0c954,#f00c0c);
     padding: 12px;
     text-align: center;
     margin-top: 2em;
@@ -312,13 +364,20 @@ img.vision--img {
 
 /* mobile nav */
 @media screen and (max-width: 864px) {
-
+    body{
+        background-image: linear-gradient(-180deg, #069cca, #9609a2);
+    }
+        .hero--container{
+        background-image: linear-gradient(65deg, rgba(26, 32, 218, 0.55), rgba(85, 208, 45, 0.71)), url(https://res.cloudinary.com/codinghub/images/hero_z4ovci.png);
+    }
     .hero--nav .one {
         font-size: 42px;
         position: relative;
         top: 4px;
     }
-
+    .slideshow,.dot-container{
+        display:none;
+    }
     .main {
         grid-auto-flow: row !important;
         margin-left: 2%;
@@ -340,6 +399,7 @@ img.vision--img {
     }
 
     .hero--text {
+        top:9%;
         font-size: 50px;
         padding-left: 0;
         padding-right: 25px;

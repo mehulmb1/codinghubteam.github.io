@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $('#submit').on('click', function(e) {
         e.preventDefault();
-        console.log("Entered sending process");
+        //console.log("Entered sending process");
         document.getElementById('submit').disabled='disabled';
         // Get the form instance
         var $form = $('#testform');
@@ -9,10 +9,10 @@ $(document).ready(function(){
         // Use Ajax to submit form data
         var url = "https://script.google.com/macros/s/AKfycbw2BhLpVcwKywt3l2dMCpyU6499k-g1lgHKJVv1mJNrnvcIvEc/exec";
         
-        var jqxhr = $.get(url, $form.serialize(), function(data) {
-            console.log("Success! Data: " + data.statusText);
-            alert("Thank you!!!");
-            setTimeout(()=>console.log("Closing the window..." + "\n" +"Good Bye"),3000);
+        var jqxhr = $.post(url, $form.serialize(), function(data) {
+            //console.log("Success! Data: " + data.statusText);
+            alert("Form Submitted."+"\n" + "Thank you!!!");
+            //setTimeout(()=>console.log("Closing the window..." + "\n" +"Good Bye"),3000);
             window.close();
         })
         .fail(function(data){
