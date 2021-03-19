@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+.bg-image {
+  position: absolute;
+  transform: translateY(500px);
+  left: 10vw;
+  height: 70vh;
+  opacity: 70%;
+  z-index: -1;
+}
+
+.img {
+  position: absolute;
+  top: 10vh;
+  height: 650px;
+  width: 800px;
+  overflow: hidden;
+}
+
+.greet {
+  margin-top: 25vh;
+}
+
+.greet .subtitle {
+  line-height: 40px;
+}
+
+.button.hr {
+  background-color: rgb(13, 20, 30);
+  color: white;
+  border: none;
+}
+
+.button.hr:hover {
+  color: white;
+}
